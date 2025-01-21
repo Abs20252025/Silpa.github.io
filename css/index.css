@@ -499,10 +499,9 @@ section{
 }
 
 .silpa-row {
-  background: var(--color-dark);
   display: flex;
   flex-wrap: wrap;
-  color: white;
+  color: black;
 }
 
 /* Columnas de la fila */
