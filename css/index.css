@@ -579,7 +579,7 @@ section{
 
 .silpa-full-column{
   width: 100%;
-  background-image: url('/img/fondo-valores.jpg');
+  background-image: url('img/fondo-valores.jpg');
   background-size: cover;
   text-align: center;
 }
