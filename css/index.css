@@ -107,51 +107,12 @@ body {
 }
 
 /* INICIO SILPA */
+
 .inicio-silpa {
   position: relative;
   width: 100%;
-  height: 100vh; /* Ocupar toda la altura de la pantalla */
+  height: 100vh;
   overflow: hidden;
-}
-
-.inicio-silpa__content h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.inicio-silpa__content p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.inicio-silpa__content .btn-primary, 
-.inicio-silpa__content .btn-secondary {
-  display: inline-block;
-  padding: 15px 30px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 10px;
-  text-align: center;
-}
-
-.inicio-silpa__content .btn-primary {
-  background-color: var(--color-accent);
-  color: white;
-}
-
-.inicio-silpa__content .btn-primary:hover {
-  background-color: #007a99;
-}
-
-.inicio-silpa__content .btn-secondary {
-  background-color: var(--color-light);
-  color: var(--color-dark);
-}
-
-.inicio-silpa__content .btn-secondary:hover {
-  background-color: #8fb858;
 }
 
 /* Estilo para cada slide */
@@ -197,6 +158,8 @@ body {
   font-size: 3rem;
   margin-bottom: 10px;
   font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
 }
 
 .slide-content p {
@@ -240,6 +203,196 @@ section{
   width: 100%;
 }
 
+
+
+
+/* SOMOS SILPA */
+
+/* Contenedor principal */
+/* Contenedor principal de la fila */
+
+.somos-silpa {
+  padding: 0; /* Sin padding en la sección principal */
+  width: 100%;
+  height: auto;
+}
+
+.silpa-container {
+  padding: 10px; /* Agrega espacio interno */
+  width: 100%;
+  height: auto;
+}
+
+.silpa-row {
+  background: var(--color-dark);
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(255, 255, 255);
+  background-color: var(--color-dark);
+}
+
+.silpa-row h2{
+  font-size: 2em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+}
+
+/* Columnas de la fila */
+.silpa-column {
+  flex: 1;
+  padding: 10px 20px 5px 20px;
+  box-sizing: border-box;
+  
+}
+
+/* Columna izquierda con la imagen */
+.silpa-left {
+  text-align: center;
+}
+
+.silpa-left p{
+  text-align: justify;
+}
+
+.silpa-image {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 5px;
+  height: auto;
+  border-radius: 25px;
+}
+
+.silpa-image:hover{
+  transform: scale(1.05); /* Agranda la tarjeta al pasar el ratón */
+}
+
+/* Columna derecha con misión y visión */
+.silpa-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+}
+
+/* Estructura de misión y visión con imagen al lado izquierdo */
+.silpa-mission-vision {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 2px dashed  var(--color-secondary); /* Borde suave translúcido */
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* background-color: rgba(255, 255, 255, 0.7); /* Fondo translúcido */ 
+}
+
+.silpa-mission-vision:hover {
+  transform: scale(1.05); /* Agranda la tarjeta al pasar el ratón */
+  box-shadow: 0 4px 6px #9ec35f;
+  background-color: rgba(255, 255, 255, 0.973);
+}
+
+.silpa-mission-icon img,
+.silpa-mission-text img {
+  width: 100px;
+  height: auto;
+  margin-right: 15px; /* Espacio entre imagen y texto */
+  filter: invert(43%) sepia(23%) saturate(879%) hue-rotate(91deg) brightness(89%) contrast(91%);
+}
+
+.silpa-mission-text {
+  max-width: 500px;
+  color: black;
+}
+
+.silpa-mission-vision .silpa-mission-text{
+  color: white;
+}
+
+.silpa-mission-vision:hover .silpa-mission-text{
+  color: black;
+}
+
+.silpa-mission-vision h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.silpa-mission-vision p {
+  font-size: 16px;
+  text-align: justify;
+}
+
+/* Fila de valores */
+
+.silpa-full-column{
+  width: 100%;
+  background-image: url('/img/fondo-valores.jpg');
+  background-size: cover;
+  text-align: center;
+}
+
+.silpa-full-column h3 {
+  font-size: 2em;
+  color: #FFFFFF; /* Blanco puro */
+  font-weight: bold;
+  padding-top: 5px;
+  text-transform: uppercase; /* Para un diseño más uniforme */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
+}
+
+.silpa-values-cards {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Hace que las tarjetas se acomoden bien */
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: center;  /* Centra las tarjetas horizontalmente */
+  max-width: 100%; /* Controla el ancho máximo del contenedor */
+  margin-left: auto;  /* Centra el contenedor */
+  margin-right: auto; /* Centra el contenedor */
+   /* Añadir algo de padding para evitar que las tarjetas se peguen a los bordes en pantallas pequeñas */
+}
+
+.silpa-value-card {
+  background-color: rgba(255, 255, 255, 0.288); /* Fondo translúcido */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde suave translúcido */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  backdrop-filter: blur(5px); /* Efecto de desenfoque en el fondo detrás de la tarjeta */
+}
+
+.silpa-value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo más sólido al pasar el cursor */
+}
+
+.silpa-value-icon {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  filter: invert(50%) sepia(40%) saturate(500%) hue-rotate(90deg) brightness(100%) contrast(90%);
+
+}
+
+.silpa-value-card h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.silpa-value-card p {
+  font-size: 1em;
+  color: #252323;
+  text-align: justify;
+}
+
+/* SERVICIOOOOOOOOOOOOS*/
+
 /* Ajustar la altura total de la sección y asegurar que se ocupe todo el viewport */
 .servicios-silpa {
   min-height: 100vh; /* Garantiza que ocupe todo el alto del viewport */
@@ -248,6 +401,7 @@ section{
   justify-content: flex-start; /* Alinea los elementos al principio */
   margin: 0; /* Elimina cualquier margen */
   padding: 0; /* Elimina cualquier padding */
+  background-color: var(--color-primary);
 }
 
 /* Ajuste en content-wave para evitar el espacio extra */
@@ -278,12 +432,14 @@ section{
 
 .titulo-servicios {
   color: #fff; /* Color del texto */
-  font-size: 2.5em;
-  font-weight: bold;
   z-index: 2; /* Asegura que el título esté encima del wave */
   position: relative;
-  letter-spacing: 10px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2em;
+  font-weight: bold;
+  padding-top: 5px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
 }
 
 .wave {
@@ -292,11 +448,10 @@ section{
   left: 0;
   width: 100%;
   height: 70px;
-  background-image: url('/img/wave.png');
+  background-image: url('/img/wave1.png');
   background-size: 1000px 100px;
   animation: wave 10s linear infinite;
   z-index: 1; /* El wave está detrás del título */
-  filter: hue-rotate(180deg); /* Cambia el tono de la imagen */
 }
 
 @keyframes wave {
@@ -481,170 +636,6 @@ section{
 }
 
 
-/* SOMOS SILPA */
-
-/* Contenedor principal */
-/* Contenedor principal de la fila */
-
-.somos-silpa {
-  padding: 0; /* Sin padding en la sección principal */
-  width: 100%;
-  height: auto;
-}
-
-.silpa-container {
-  padding: 10px; /* Agrega espacio interno */
-  width: 100%;
-  height: auto;
-}
-
-.silpa-row {
-  display: flex;
-  flex-wrap: wrap;
-  color: black;
-}
-
-/* Columnas de la fila */
-.silpa-column {
-  flex: 1;
-  padding: 10px 20px 5px 20px;
-  box-sizing: border-box;
-  
-}
-
-/* Columna izquierda con la imagen */
-.silpa-left {
-  text-align: center;
-}
-
-.silpa-left p{
-  text-align: justify;
-}
-
-.silpa-image {
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 10px;
-  height: auto;
-}
-
-/* Columna derecha con misión y visión */
-.silpa-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra el contenido verticalmente */
-}
-
-/* Estructura de misión y visión con imagen al lado izquierdo */
-.silpa-mission-vision {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-  border: 3px solid rgb(134, 170, 62);
-  padding: 25px;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: var(--color-white);
-}
-
-.silpa-mission-vision:hover {
-  transform: scale(1.05); /* Agranda la tarjeta al pasar el ratón */
-  box-shadow: 0 4px 6px #9ec35f;
-}
-
-.silpa-mission-icon img,
-.silpa-mission-text img {
-  width: 100px;
-  height: auto;
-  margin-right: 15px; /* Espacio entre imagen y texto */
-}
-
-.silpa-mission-text {
-  max-width: 500px;
-  color: black;
-}
-
-.silpa-mission-vision h3 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.silpa-mission-vision p {
-  font-size: 16px;
-  text-align: justify;
-}
-
-/* Fila de valores */
-
-.silpa-full-column{
-  width: 100%;
-  background-image: url('../img/fondo-valores.jpg');
-  background-size: cover;
-  text-align: center;
-}
-
-.silpa-full-column h3 {
-  font-size: 2em;
-  color: #FFFFFF; /* Blanco puro */
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding-top: 5px;
-  text-transform: uppercase; /* Para un diseño más uniforme */
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
-}
-
-.silpa-values-cards {
-  padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Hace que las tarjetas se acomoden bien */
-  gap: 20px; /* Espacio entre las tarjetas */
-  justify-content: center;  /* Centra las tarjetas horizontalmente */
-  margin-top: 20px;
-  max-width: 100%; /* Controla el ancho máximo del contenedor */
-  margin-left: auto;  /* Centra el contenedor */
-  margin-right: auto; /* Centra el contenedor */
-   /* Añadir algo de padding para evitar que las tarjetas se peguen a los bordes en pantallas pequeñas */
-}
-
-.silpa-value-card {
-  background-color: rgba(255, 255, 255, 0.288); /* Fondo translúcido */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde suave translúcido */
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  backdrop-filter: blur(5px); /* Efecto de desenfoque en el fondo detrás de la tarjeta */
-}
-
-.silpa-value-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo más sólido al pasar el cursor */
-}
-
-.silpa-value-icon {
-  width: 100px;
-  height: auto;
-  object-fit: contain;
-  filter: invert(50%) sepia(40%) saturate(500%) hue-rotate(90deg) brightness(100%) contrast(90%);
-
-}
-
-.silpa-value-card h4 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #000000;
-}
-
-.silpa-value-card p {
-  font-size: 1em;
-  color: #252323;
-  text-align: justify;
-}
-
 @media (max-width: 768px) {
   .silpa-header__nav {
     display: none;
@@ -673,4 +664,99 @@ section{
   .silpa-header__nav.active {
     display: flex;
   }
+
+  .silpa-mission-icon img,
+  .silpa-mission-text img {
+    width: 65px;
+    height: auto;
+    margin-right: 10px; /* Espacio entre imagen y texto */
+  }
+
+  .silpa-mission-vision {
+    margin-bottom: 20px;
 }
+
+
+  .silpa-mission-vision {
+    padding: 15px;
+  }
+
+  .silpa-full-column{
+    padding: 15px;
+  }
+
+  .silpa-values-cards {
+    gap: 15px;
+  }
+  .silpa-value-card h4 {
+    margin-bottom: 0;
+  }
+
+  .silpa-value-card {
+    padding: 10px;
+  }
+
+
+  .content-wave {
+    height: 26vh; /* Ajusta la altura de la ola */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; /* Asegura que no haya desbordes visibles */
+  }
+
+
+  .titulo-servicios {
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 3px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  }
+
+  .SILPA-SERVICIO-ROTADO{
+    padding: 8px;
+  }
+
+  .SILPA-SERVICIOS-CONTENEDOR {
+    margin-top: 10px;
+  }
+
+  .SILPA-SERVICIO-CUADRO-CONTENEDOR {
+    width: 45%;
+    margin: 0;
+    height: 340px;
+    position: relative; /* Necesario para posicionar elementos dentro */
+  }
+  .SILPA-SERVICIO-CUADRO-CONTENEDOR .SILPA-SERVICIO-IMAGEN{
+    height: 100%;
+  }
+
+  .SILPA-SERVICIO-IMAGEN {
+    width: 100%;
+    top: 0;
+  }
+
+  .SILPA-SERVICIO-IMAGEN img {
+    width: 100%;
+    height: 80%;
+  }
+
+  .SILPA-SERVICIO-TITULO .SILPA-SERVICIO-ROTADO{
+    margin: auto;
+  }
+
+  .SILPA-SERVICIO-ROTADO .links {
+    display: block;
+  }
+  .SILPA-SERVICIO-ROTADO .links {
+    display: block;
+  } 
+
+
+  .links a{
+    margin-top: 15px;
+  }
+
+} 
+
