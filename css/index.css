@@ -1,7 +1,7 @@
 /* VARIABLES DE COLOR */
 :root {
-  --color-primary: #144d6e; /* Azul oscuro (SILPA letras grandes) */
-  --color-secondary: #377b52; /* Verde (logos pequeños) */ 
+  --color-primary: #9fb821; /* Azul oscuro (SILPA letras grandes) */
+  --color-secondary: #378aa9; /* Verde (logos pequeños) */ 
   --color-accent: #348ba8; /* Azul línea grande */
   --color-light: #9ec35f; /* Verde claro línea pequeña */
   --color-dark: #162632; /* Azul muy oscuro (soluciones...) */
@@ -20,6 +20,10 @@ body {
   line-height: 1.6;
   background-color: var(--color-white);
   color: var(--color-dark);
+}
+
+body, html {
+  overflow-x: hidden; /* Prevenir el scroll horizontal */
 }
 
 /* HEADER */
@@ -237,12 +241,23 @@ section{
   text-shadow: 1px 1px 4px rgb(0, 0, 0);
 }
 
+/* Estilo inicial del título (invisible y desplazado) */
+.silpa-row h3 {
+  opacity: 0;
+  transform: translateY(20px); /* Desplazamiento hacia abajo */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Estilo cuando el título se vuelve visible */
+.silpa-row h3.visible {
+  opacity: 1;
+  transform: translateY(0); /* Regresa a su posición original */
+}
 /* Columnas de la fila */
 .silpa-column {
   flex: 1;
   padding: 10px 20px 5px 20px;
-  box-sizing: border-box;
-  
+  box-sizing: border-box; 
 }
 
 /* Columna izquierda con la imagen */
@@ -297,7 +312,7 @@ section{
   width: 100px;
   height: auto;
   margin-right: 15px; /* Espacio entre imagen y texto */
-  filter: invert(43%) sepia(23%) saturate(879%) hue-rotate(91deg) brightness(89%) contrast(91%);
+  filter: invert(59%) sepia(49%) saturate(541%) hue-rotate(48deg) brightness(97%) contrast(90%);
 }
 
 .silpa-mission-text {
@@ -362,6 +377,14 @@ section{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   backdrop-filter: blur(5px); /* Efecto de desenfoque en el fondo detrás de la tarjeta */
+  opacity: 0;
+  transform: translateY(20px); /* Deslizar desde abajo */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.silpa-value-card.visible {
+  opacity: 1;
+  transform: translateY(0); /* Restablecer posición */
 }
 
 .silpa-value-card:hover {
@@ -370,11 +393,15 @@ section{
   background-color: rgba(255, 255, 255, 0.8); /* Fondo más sólido al pasar el cursor */
 }
 
+.silpa-value-card:hover .silpa-value-icon {
+  filter: invert(50%) sepia(86%) saturate(322%) hue-rotate(85deg) brightness(90%) contrast(91%);
+}
+
 .silpa-value-icon {
   width: 100px;
   height: auto;
   object-fit: contain;
-  filter: invert(50%) sepia(40%) saturate(500%) hue-rotate(90deg) brightness(100%) contrast(90%);
+  filter: invert(15%) sepia(11%) saturate(178%) hue-rotate(172deg) brightness(85%) contrast(95%);
 
 }
 
@@ -391,6 +418,34 @@ section{
   text-align: justify;
 }
 
+/* Animación para las columnas */
+.silpa-column {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out, box-shadow 0.3s ease;
+  transition-delay: 0.5s;
+}
+
+.silpa-column.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Columna izquierda animación */
+.silpa-left {
+  transform: translateX(-100px); /* Cambié a -50px */
+}
+
+/* Columna derecha animación */
+.silpa-right {
+  transform: translateX(100px); /* Cambié a 50px */
+}
+
+.silpa-column.visible {
+  opacity: 1; /* Aparece */
+  transform: translateX(0); /* Regresa a su posición inicial */
+}
+
 /* SERVICIOOOOOOOOOOOOS*/
 
 /* Ajustar la altura total de la sección y asegurar que se ocupe todo el viewport */
@@ -399,9 +454,9 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Alinea los elementos al principio */
-  margin: 0; /* Elimina cualquier margen */
+  margin: 0; /* Elimina cualquier margen */ 
   padding: 0; /* Elimina cualquier padding */
-  background-color: var(--color-primary);
+  background-color: #144d6e;
 }
 
 /* Ajuste en content-wave para evitar el espacio extra */
@@ -409,7 +464,7 @@ section{
   position: relative;
   width: 100%;
   height: 20vh; /* Ajusta la altura de la ola */
-  background-color: var(--color-secondary);
+  background-color: #377b52;
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Alineación al inicio */
@@ -635,6 +690,129 @@ section{
 }
 
 
+/* FOOTER */
+
+/* FOOTER */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.descripcionFooter{
+  text-align: justify;
+  width: 90%;
+}
+
+.footerLogo {
+  width: 100%;
+  height: auto;
+}
+
+.iconInfo{
+  margin-left: 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #50c5f3;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.footer-column ul li a {
+  display: flex;
+  align-items: center; /* Alinea los íconos y el texto verticalmente */
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a img {
+  margin-right: 8px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(242deg) brightness(114%) contrast(101%);
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+  color: #d4ff00; /* Cambiar color en hover */
+  transform: scale(1.2); /* Aumenta ligeramente el tamaño del ícono */
+  transform-origin: left;
+}
+
+.footer-column ul li a:hover img{
+  filter: invert(94%) sepia(46%) saturate(4167%) hue-rotate(13deg) brightness(104%) contrast(102%);
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño del ícono */
+}
+
+.footer-column .social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-column .social-icons img {
+  width: 54px;
+  height: 54px;
+  transition: transform 0.3s ease; /* Efecto al pasar el mouse */
+}
+
+.footer-column .social-icons img:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño del ícono */
+}
+
+.map-container iframe {
+  border: none;
+  border-radius: 25px;
+  width: 100%; /* Asegura que el iframe ocupe el 100% del contenedor */
+  height: 230px; /* Ajusta la altura del mapa */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Una columna en pantallas aún más pequeñas */
+  }
+
+  .footer-column h4 {
+    font-size: 16px; /* Reduce el tamaño del encabezado */
+  }
+
+  .footer-column ul li {
+    font-size: 12px; /* Reduce el tamaño del texto */
+  }
+}
+
+
 @media (max-width: 768px) {
   .silpa-header__nav {
     display: none;
@@ -695,6 +873,8 @@ section{
     padding: 10px;
   }
 
+
+
   .content-wave {
     height: 18vh; /* Ajusta la altura de la ola */
     display: flex;
@@ -710,6 +890,8 @@ section{
     text-transform: uppercase;
     text-shadow: 1px 1px 4px rgb(0, 0, 0);
   }
+
+  
 
   .SILPA-SERVICIO-TITULO {
     font-size: 0.73em;
