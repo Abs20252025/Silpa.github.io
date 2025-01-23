@@ -42,3 +42,79 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const columns = document.querySelectorAll(".silpa-column");
+
+  // Función para verificar si un elemento es visible en la pantalla
+  function isVisible(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  }
+
+  // Agrega la clase `visible` cuando las columnas están en pantalla
+  function handleScroll() {
+    columns.forEach((column) => {
+      if (isVisible(column)) {
+        column.classList.add("visible");
+      }
+    });
+  }
+
+  // Escucha el evento de scroll
+  window.addEventListener("scroll", handleScroll);
+
+  // Llama a handleScroll inicialmente por si ya está visible al cargar
+  handleScroll();
+});
+
+/* VALORES*/
+document.addEventListener("DOMContentLoaded", () => {
+  const title = document.querySelector(".silpa-row .silpa-full-column h3"); // Selecciona el título
+
+  // Función para verificar si el elemento es visible en la pantalla
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  }
+
+  // Función que revisa si el título es visible y le agrega la clase
+  function checkVisibility() {
+    if (isInViewport(title)) {
+      title.classList.add("visible");
+    }
+  }
+
+  // Escucha el scroll y ejecuta la función
+  window.addEventListener("scroll", checkVisibility);
+
+  // Ejecuta al cargar la página por si ya está visible
+  checkVisibility();
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const valueCards = document.querySelectorAll(".silpa-value-card");
+
+  // Función para verificar si un elemento es visible en la pantalla
+  function isVisible(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  }
+
+  // Agrega la clase `visible` cuando las tarjetas están en pantalla
+  function handleScroll() {
+    valueCards.forEach((card) => {
+      if (isVisible(card)) {
+        card.classList.add("visible");
+      }
+    });
+  }
+
+  // Escucha el evento de scroll
+  window.addEventListener("scroll", handleScroll);
+
+  // Llama a handleScroll inicialmente por si ya está visible al cargar
+  handleScroll();
+});
