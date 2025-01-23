@@ -456,7 +456,7 @@ section{
   justify-content: flex-start; /* Alinea los elementos al principio */
   margin: 0; /* Elimina cualquier margen */ 
   padding: 0; /* Elimina cualquier padding */
-  background-color: #144d6e;
+  background-color: var(--color-dark);
 }
 
 /* Ajuste en content-wave para evitar el espacio extra */
@@ -503,7 +503,7 @@ section{
   left: 0;
   width: 100%;
   height: 70px;
-  background-image: url('../img/wave1.png');
+  background-image: url('../img/wave2.png');
   background-size: 1000px 100px;
   animation: wave 10s linear infinite;
   z-index: 1; /* El wave está detrás del título */
@@ -757,6 +757,7 @@ footer {
   color: #d4ff00; /* Cambiar color en hover */
   transform: scale(1.2); /* Aumenta ligeramente el tamaño del ícono */
   transform-origin: left;
+  font-weight: bold;
 }
 
 .footer-column ul li a:hover img{
@@ -934,7 +935,7 @@ footer {
 
   .SILPA-SERVICIO-IMAGEN img {
     width: 100%;
-    height: 75%;
+    height: 80%;
   }
 
 
