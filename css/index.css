@@ -797,6 +797,11 @@ footer {
   .footer-container {
     grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas más pequeñas */
   }
+
+  .footer-column h4 {
+        font-size: 1.5em;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -816,6 +821,11 @@ footer {
     text-align: justify;
     width: 100%;
   }
+
+  .footer-column h4 {
+        font-size: 1.5em;
+        text-align: center;
+    }
   
 }
 
@@ -965,6 +975,11 @@ footer {
     text-align: justify;
     width: 100%;
   }
+
+  .footer-column h4 {
+        font-size: 1.5em;
+        text-align: center;
+    }
 
 } 
 
