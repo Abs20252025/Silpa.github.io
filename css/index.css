@@ -811,6 +811,12 @@ footer {
   .footer-column ul li {
     font-size: 12px; /* Reduce el tamaño del texto */
   }
+
+  .descripcionFooter{
+    text-align: justify;
+    width: 100%;
+  }
+  
 }
 
 
@@ -953,6 +959,11 @@ footer {
 
   .links a{
     margin-top: 10px;
+  }
+
+  .descripcionFooter{
+    text-align: justify;
+    width: 100%;
   }
 
 } 
