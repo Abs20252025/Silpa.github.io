@@ -1196,5 +1196,9 @@ footer {
     text-align: center;
 }
 
+  .footer-column ul li a {
+  font-size: 1.4em;
+}
+
 } 
 
