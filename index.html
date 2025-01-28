@@ -8,6 +8,8 @@
     <link rel="icon" type="image/webp" href="img/SILPA-logo.svg" >
     <script src="js/app.js"></script>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -22,9 +24,9 @@
           <nav class="silpa-header__nav">
             <ul class="silpa-header__menu">
               <li class="silpa-header__menu-item"><a href="index.html">Inicio</a></li>
-              <li class="silpa-header__menu-item"><a href="#nosotros">Nosotros</a></li>
-              <li class="silpa-header__menu-item"><a href="#servicios">Servicios</a></li>
-              <li class="silpa-header__menu-item"><a href="#contacto">Contacto</a></li>
+              <li class="silpa-header__menu-item"><a href="NosotrosSilpa.html">Nosotros</a></li>
+              <li class="silpa-header__menu-item"><a href="index.html#servicios">Servicios</a></li>
+              <li class="silpa-header__menu-item"><a href="Contacto.html">Contacto</a></li>
             </ul>
           </nav>
           <div class="silpa-header__cta">
@@ -62,65 +64,68 @@
         </div>
       </div>
     </section>
-    <section class="somos-silpa">
-      <div class="silpaContainer">
-        <div class="silpa-row">
-          <div class="silpa-column silpa-left">
-            <h2>¿QUIÉNES SOMOS?</h2>
-            <img src="img/Personal-SILPA.png" alt="Imagen SILPA" class="silpa-image">
-            <p>Somos SILPA: Soluciones Integrales de Limpieza y Protección Ambiental, una empresa 100% peruana líder en la prestación innovadora de servicios en Gestión y Saneamiento Ambiental, Limpieza y Mantenimiento Integral. Aportamos soluciones eficientes y sostenibles para empresas e instituciones.</p>
+    <section class="silpa-trabajo-section">
+      <div class="silpa-container">
+        <!-- Título -->
+        <h2 class="silpa-trabajo-title">¿CÓMO TRABAJAMOS EN SILPA?</h2>
+    
+        <!-- Descripción -->
+        <p class="silpa-trabajo-description">
+          En SILPA, seguimos un proceso estructurado y eficiente para garantizar el control efectivo de plagas, adaptándonos a las necesidades específicas de cada cliente. Nuestro enfoque se basa en cinco etapas clave:
+        </p>
+    
+        <!-- Cards de los pasos -->
+        <div class="silpa-trabajo-cards">
+          <!-- Card 1: Inspección -->
+          <div class="silpa-card">
+            <img src="svg/inspeccion.svg" alt="Inspección" class="silpa-card-icono">
+            <h3 class="silpa-card-title">1. Inspección</h3>
+            <p class="silpa-card-description">
+              Realizamos una evaluación exhaustiva del área a tratar, identificando la presencia de plagas, el nivel de infestación y posibles deficiencias en la infraestructura.
+            </p>
           </div>
-          <div class="silpa-column silpa-right">
-            <div class="silpa-mission-vision">
-              <div class="silpa-mission-icon">
-                <img src="svg/mision.svg" alt="Misión Imagen" class="mission-image">
-              </div>
-              <div class="silpa-mission-text">
-                <h3>Misión</h3>
-                <p>Brindamos soluciones integrales en gestión ambiental, saneamiento y limpieza para proteger la salud pública y el medio ambiente. Cumplimos con las normativas del MINSA, MINAM y estándares internacionales como ISO 14001, asegurando calidad, sostenibilidad y seguridad en nuestros servicios para el bienestar de nuestros clientes y el desarrollo sostenible.</p>
-              </div>
-            </div>
-            <div class="silpa-mission-vision">
-              <div class="silpa-mission-icon">
-                <img src="svg/vision.svg" alt="Visión Imagen" class="vision-image">
-              </div>
-              <div class="silpa-mission-text">
-                <h3>Visión</h3>
-                <p>Ser reconocidos como la empresa líder en gestión ambiental, saneamiento y limpieza integral a nivel nacional promoviendo soluciones innovadoras y sostenibles que contribuyan al bienestar de nuestros clientes y a la protección del medio ambiente.</p>
-              </div>
-            </div>
+    
+          <!-- Card 2: Identificación -->
+          <div class="silpa-card">
+            <img src="svg/identificacion.svg" alt="Inspección" class="silpa-card-icono">
+            <h3 class="silpa-card-title">2. Identificación</h3>
+            <p class="silpa-card-description">
+              Determinamos las áreas críticas que requieren intervención especializada y analizamos cada punto de riesgo para desarrollar una solución personalizada.
+            </p>
           </div>
-        </div>    
-        <div class="silpa-row">
-          <div class="silpa-full-column">
-            <h3>NUESTROS VALORES</h3>
-              <div class="silpa-values-cards">
-                  <div class="silpa-value-card">
-                      <img src="svg/responsabilidad.svg" alt="Responsabilidad" class="silpa-value-icon">
-                      <h4>RESPONSABILIDAD</h4>
-                      <p>Actuamos con seriedad y profesionalismo, garantizando que nuestros servicios sean eficaces, seguros y respetuosos con los clientes y el entorno.</p>
-                  </div>
-                  <div class="silpa-value-card">
-                      <img src="svg/innovacion.svg" alt="Innovación" class="silpa-value-icon">
-                      <h4>INNOVACIÓN</h4>
-                      <p>Buscamos constantemente nuevas tecnologías y métodos para mejorar nuestros procesos, asegurando soluciones más eficientes y de calidad.</p>
-                  </div>
-                  <div class="silpa-value-card">
-                      <img src="svg/sostenibilidad.svg" alt="Sostenibilidad" class="silpa-value-icon">
-                      <h4>SOSTENIBILIDAD</h4>
-                      <p>Compromiso con el medio ambiente mediante prácticas responsables y servicios que minimizan el impacto ecológico.</p>
-                  </div>
-                  <div class="silpa-value-card">
-                      <img src="svg/compromiso.svg" alt="Compromiso" class="silpa-value-icon">
-                      <h4>COMPROMISO</h4>
-                      <p>Dedicación a ofrecer soluciones efectivas y un servicio de calidad que satisfaga las necesidades de nuestros clientes.</p>
-                  </div>
-              </div>
+    
+          <!-- Card 3: Determinación -->
+          <div class="silpa-card">
+            <img src="svg/determinacion.svg" alt="Inspección" class="silpa-card-icono">
+            <h3 class="silpa-card-title">3. Determinación</h3>
+            <p class="silpa-card-description">
+              Diseñamos un programa de control específico, seleccionando las medidas más adecuadas con métodos seguros y efectivos.
+            </p>
+          </div>
+    
+          <!-- Card 4: Control y Prevención -->
+          <div class="silpa-card">
+            <img src="svg/prevencion.svg" alt="Inspección" class="silpa-card-icono">
+            <h3 class="silpa-card-title">4. Control y Prevención</h3>
+            <p class="silpa-card-description">
+              Implementamos medidas correctivas y preventivas con productos certificados y tecnología avanzada para garantizar un ambiente seguro.
+            </p>
+          </div>
+    
+          <!-- Card 5: Comunicación y Asesoría -->
+          <div class="silpa-card">
+            <img src="svg/comunicacion.svg" alt="Inspección" class="silpa-card-icono">
+            <h3 class="silpa-card-title">5. Comunicación y Asesoría</h3>
+            <p class="silpa-card-description">
+              Brindamos asesoría personalizada y recomendaciones para prevenir futuras infestaciones, manteniendo una comunicación constante con nuestros clientes.
+            </p>
           </div>
         </div>
-      </div> 
+      </div>
     </section>
-    <section class="SILPA-servicios-section">
+    
+    
+    <section class="SILPA-servicios-section" id="servicios">
       <div class="content-wave">
         <div class="wave"></div>
         <div class="SILPA-servicios-titulo">
@@ -142,8 +147,10 @@
               <div class="SILPA-servicio-back">
                 <p>Soluciones confiables para el control de plagas, garantizando ambientes seguros y saludables.</p>
                 <div class="SILPA-servicio-links">
-                  <a href="#" class="SILPA-ver-mas">Ver más</a>
-                  <a href="#" class="SILPA-cotizar">Cotizar</a>
+                  <a href="#" class="SILPA-ver-mas">Ver&nbsp; <i class="fas fa-plus"></i></a>
+                  <a href="https://wa.me/5117436577?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Asesoría%20de%20Proyecto%20Ambiental%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos." target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
             </div>
@@ -157,13 +164,15 @@
               <div class="SILPA-servicio-back">
                 <p>Eliminación efectiva de microorganismos para proteger la salud en espacios críticos.</p>
                 <div class="SILPA-servicio-links">
-                  <a href="#" class="SILPA-ver-mas">Ver más</a>
-                  <a href="#" class="SILPA-cotizar">Cotizar</a>
+                  <a href="#" class="SILPA-ver-mas">Ver&nbsp; <i class="fas fa-plus"></i></a>
+                  <a href="https://wa.me/5117436577?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Asesoría%20de%20Proyecto%20Ambiental%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos." target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
             </div>
     
-            <!-- Desinfección -->
+            <!-- Desinsectacion -->
             <div class="SILPA-servicio-card">
               <div class="SILPA-servicio-front">
                 <img src="svg/desinsectacion.svg" alt="Desinsectación">
@@ -172,13 +181,15 @@
               <div class="SILPA-servicio-back">
                 <p>Control especializado de insectos, asegurando espacios libres de infestaciones.</p>
                 <div class="SILPA-servicio-links">
-                  <a href="#" class="SILPA-ver-mas">Ver más</a>
-                  <a href="#" class="SILPA-cotizar">Cotizar</a>
+                  <a href="#" class="SILPA-ver-mas">Ver&nbsp; <i class="fas fa-plus"></i></a>
+                  <a href="https://wa.me/5117436577?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Asesoría%20de%20Proyecto%20Ambiental%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos." target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
             </div>
 
-            <!-- Desinfección -->
+            <!-- Desratizacion -->
             <div class="SILPA-servicio-card">
               <div class="SILPA-servicio-front">
                 <img src="svg/desratizacion.svg" alt="Desratización">
@@ -187,8 +198,10 @@
               <div class="SILPA-servicio-back">
                 <p>Prevención y erradicación de roedores, cuidando la higiene y seguridad de tus ambientes.</p>
                 <div class="SILPA-servicio-links">
-                  <a href="#" class="SILPA-ver-mas">Ver más</a>
-                  <a href="#" class="SILPA-cotizar">Cotizar</a>
+                  <a href="#" class="SILPA-ver-mas">Ver&nbsp; <i class="fas fa-plus"></i></a>
+                  <a href="https://wa.me/5117436577?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Asesoría%20de%20Proyecto%20Ambiental%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos." target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
             </div>
@@ -210,8 +223,10 @@
               <div class="SILPA-servicio-back">
                 <p>Servicios completos para mantener espacios limpios, ordenados y funcionales.</p>
                 <div class="SILPA-servicio-links">
-                  <a href="#" class="SILPA-ver-mas">Ver más</a>
-                  <a href="#" class="SILPA-cotizar">Cotizar</a>
+                  <a href="#" class="SILPA-ver-mas">Ver&nbsp; <i class="fas fa-plus"></i></a>
+                  <a href="https://wa.me/5117436577?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Asesoría%20de%20Proyecto%20Ambiental%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos." target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
             </div>
@@ -224,8 +239,10 @@
               <div class="SILPA-servicio-back">
                 <p>Servicio integral de limpieza para todo tipo de instalaciones.</p>
                 <div class="SILPA-servicio-links">
-                  <a href="#" class="SILPA-ver-mas">Ver más</a>
-                  <a href="#" class="SILPA-cotizar">Cotizar</a>
+                  <a href="#" class="SILPA-ver-mas">Ver&nbsp; <i class="fas fa-plus"></i></a>
+                  <a href="https://wa.me/5117436577?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Asesoría%20de%20Proyecto%20Ambiental%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos." target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
             </div>
@@ -244,8 +261,10 @@
               <div class="SILPA-servicio-back">
                 <p>Evaluación profesional de calidad ambiental para cumplir con estándares regulatorios.</p>
                 <div class="SILPA-servicio-links">
-                  <a href="#" class="SILPA-ver-mas">Ver más</a>
-                  <a href="#" class="SILPA-cotizar">Cotizar</a>
+                  <a href="#" class="SILPA-ver-mas">Ver&nbsp; <i class="fas fa-plus"></i></a>
+                  <a href="https://wa.me/5117436577?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Asesoría%20de%20Proyecto%20Ambiental%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos." target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
             </div>
@@ -257,8 +276,10 @@
               <div class="SILPA-servicio-back">
                 <p>Vigilancia de condiciones laborales para garantizar el bienestar de los trabajadores.</p>
                 <div class="SILPA-servicio-links">
-                  <a href="#" class="SILPA-ver-mas">Ver más</a>
-                  <a href="#" class="SILPA-cotizar">Cotizar</a>
+                  <a href="#" class="SILPA-ver-mas">Ver&nbsp; <i class="fas fa-plus"></i></a>
+                  <a href="https://wa.me/5117436577?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Asesoría%20de%20Proyecto%20Ambiental%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos." target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
             </div>
@@ -270,8 +291,10 @@
               <div class="SILPA-servicio-back">
                 <p>Soluciones técnicas para diseñar y ejecutar proyectos con impacto positivo.</p>
                 <div class="SILPA-servicio-links">
-                  <a href="#" class="SILPA-ver-mas">Ver más</a>
-                  <a href="#" class="SILPA-cotizar">Cotizar</a>
+                  <a href="#" class="SILPA-ver-mas">Ver&nbsp; <i class="fas fa-plus"></i></a>
+                  <a href="https://wa.me/5117436577?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Asesoría%20de%20Proyecto%20Ambiental%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos." target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
             </div>

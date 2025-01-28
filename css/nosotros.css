@@ -1,0 +1,128 @@
+/* Estilos generales */
+  .Elegirnos-silpa {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+  }
+  
+  .container-silpa {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .row-silpa {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alineación superior para evitar que se mueva la imagen */
+  }
+  
+  .col-left-silpa {
+    width: 50%;
+    padding-right: 30px;
+  }
+  
+  .col-right-silpa {
+    width: 50%;
+    padding-left: 30px; /* Asegura un pequeño espacio a la izquierda de la imagen */
+  }
+  
+  .titulo-silpa {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .subtitulo-silpa {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .ventajas-silpa {
+    margin-top: 20px;
+  }
+  
+  .ventaja-silpa {
+    margin-bottom: 20px;
+  }
+  
+  .ventaja-titulo-silpa {
+    color: #007bff;
+    font-size: 1.2em;
+  }
+  
+  .ventaja-texto-silpa {
+    color: #555;
+    font-size: 1em;
+    text-align: justify;
+  }
+  
+  .imagen-servicio-silpa {
+    width: 85%;
+    height: auto;
+    max-width: 500px;  /* Limitar el tamaño máximo de la imagen */
+    border-radius: 38px;
+    display: block;
+    margin-left: auto; /* Centra la imagen dentro de la columna */
+    margin-right: auto; /* Centra la imagen dentro de la columna */
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+
+    .Elegirnos-silpa {
+        height: auto;
+    }
+
+
+    .row-silpa {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .col-left-silpa,
+    .col-right-silpa {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .imagen-servicio-silpa {
+      max-width: 90%;
+    }
+  
+    .titulo-silpa {
+      font-size: 1.8em;
+    }
+  
+    .subtitulo-silpa {
+      font-size: 1.1em;
+    }
+  
+    .ventaja-titulo-silpa {
+      font-size: 1.3em;
+    }
+  
+    .ventaja-texto-silpa {
+      font-size: 0.95em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .titulo-silpa {
+      font-size: 1.5em;
+    }
+  
+    .subtitulo-silpa {
+      font-size: 1em;
+    }
+  
+    .ventaja-titulo-silpa {
+      font-size: 1.2em;
+    }
+  
+    .ventaja-texto-silpa {
+      font-size: 0.9em;
+    }
+  }
+  

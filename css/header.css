@@ -1,0 +1,144 @@
+/* VARIABLES DE COLOR */
+:root {
+    --color-primary: #9fb821; /* Azul oscuro (SILPA letras grandes) */
+    --color-secondary: #378aa9; /* Verde (logos pequeños) */ 
+    --color-accent: #348ba8; /* Azul línea grande */
+    --color-light: #9ec35f; /* Verde claro línea pequeña */
+    --color-dark: #162632; /* Azul muy oscuro (soluciones...) */
+    --color-white: #fff; /* Blanco */
+  }
+  
+  /* RESET BÁSICO */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-white);
+    color: var(--color-dark);
+  }
+  
+  body, html {
+    overflow-x: hidden; /* Prevenir el scroll horizontal */
+  }
+  
+  /* HEADER */
+  .silpa-header {
+    background-color: white;
+    color: #fff;
+    padding: 6px 0;
+  }
+  
+  .silpa-header__container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  
+  .silpa-header__logo img {
+    background-color: #ffffff;
+    width: 280px;
+    height: 80px;
+  }
+  
+  /* NAVEGACIÓN */
+  .silpa-header__nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .silpa-header__menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+  }
+  
+  .silpa-header__menu-item a {
+    font-size: 1.1em;
+    color: var(--color-dark);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .silpa-header__menu-item a:hover {
+    color: #3498db; /* Puedes elegir un azul más brillante */
+  }
+  
+  /* BOTONES */
+  .silpa-btn {
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .silpa-btn--primary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    margin-right: 25px;
+  }
+  
+  .silpa-btn--primary:hover {
+    background-color: #007a99;
+  }
+  
+  .silpa-btn--secondary {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+  
+  .silpa-btn--secondary:hover {
+    background-color: #8fb858;
+  }
+  
+  /* MENÚ RESPONSIVO */
+  .silpa-header__menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+  }
+
+
+@media (max-width: 768px) {
+    .silpa-header__nav {
+      display: none;
+      flex-direction: column;
+      background-color: var(--color-primary);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .silpa-header__menu {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .silpa-header__menu-item {
+      text-align: center;
+    }
+  
+    .silpa-header__menu-toggle {
+      display: block;
+    }
+  
+    .silpa-header__nav.active {
+      display: flex;
+    }
+}

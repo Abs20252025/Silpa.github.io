@@ -1,60 +1,63 @@
+// JS PARA MENU RESPONSIVE
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.querySelector('.silpa-header__menu-toggle');
+  const navMenu = document.querySelector('.silpa-header__nav');
 
- // JS PARA MENU RESPONSIVE
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.querySelector('.silpa-header__menu-toggle');
-    const navMenu = document.querySelector('.silpa-header__nav');
-
-    toggleButton.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
+  toggleButton.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
   });
+});
 
- // JS PARA EL SLIDER INICIO
-  document.addEventListener("DOMContentLoaded", function () {
+// JS PARA EL SLIDER INICIO
+document.addEventListener("DOMContentLoaded", function () {
   let currentSlide = 0;
   const slides = document.querySelectorAll('.slide');
   const totalSlides = slides.length;
   const slider = document.querySelector('.slider');
 
+  // Función para avanzar al siguiente slide
   function nextSlide() {
     currentSlide = (currentSlide + 1) % totalSlides; // Avanza al siguiente slide
     updateSliderPosition();
   }
 
-   // JS ACTUALIZACIÓN SLIDER
+  // Función para actualizar la posición del slider
   function updateSliderPosition() {
     const newTransformValue = `translateX(-${currentSlide * 100}%)`;
     slider.style.transform = newTransformValue;
   }
 
-   // JS PARA INTERVALO DE SLIDER
+  // Intervalo para cambiar el slide automáticamente cada 4500 ms
   setInterval(nextSlide, 4500);
 
-   // JS PARA SLIDER CONTINUO
+  // Event listener para manejar la transición y reiniciar al llegar al último slide
   slider.addEventListener('transitionend', function () {
     if (currentSlide === totalSlides - 1) {
+      // Reiniciar el slider sin animación antes de volver al primer slide
       slider.style.transition = 'none';   
       setTimeout(function () {
-        currentSlide = 0; // JS PARA REINICIO
+        currentSlide = 0; // Reiniciar al primer slide
         updateSliderPosition();
         setTimeout(function () {
-          slider.style.transition = 'transform 1s ease-in-out'; // JS REINICIO SLIDER INICIAR
+          slider.style.transition = 'transform 1s ease-in-out'; // Rehabilitar la animación
         }, 50);
-      }, 4500);  // JS PARA EL INTERVALO DEL REINICIO
+      }, 4500);  // Intervalo antes de reiniciar
     }
   });
 });
 
+
+// Función reutilizable para verificar si un elemento es visible en la ventana
+function isVisible(el) {
+  if (!el) return false; // Verifica si el elemento existe
+  const rect = el.getBoundingClientRect();
+  return rect.top < window.innerHeight && rect.bottom > 0;
+}
+
+// JS PARA LAS COLUMNAS
 document.addEventListener("DOMContentLoaded", function () {
   const columns = document.querySelectorAll(".silpa-column");
 
-  // JS VERIFICAR SI SE VISUALIZA
-  function isVisible(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom > 0;
-  }
-
-  // JS PARA MOSTRAR COLUMNAS 
   function handleScroll() {
     columns.forEach((column) => {
       if (isVisible(column)) {
@@ -63,63 +66,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // JS DETECTA MOVIMIENTO SCROLL
   window.addEventListener("scroll", handleScroll);
-
-  // JS LLAMADO DE VERIFICACION
-  handleScroll();
+  handleScroll(); // Llamado inicial para mostrar elementos al cargar
 });
 
-/* VALORES*/
+// JS PARA LOS TITULOS
 document.addEventListener("DOMContentLoaded", () => {
-  const title = document.querySelector(".silpa-row .silpa-full-column h3"); // Selecciona el título
+  const title = document.querySelector(".silpa-row .silpa-full-column h3");
 
-  // JS VERIFICAR SI SE VISUALIZA
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom > 0;
-  }
-
-  // JS VERIFICA VISUALIZACION DEL TITULO
-  function checkVisibility() {
-    if (isInViewport(title)) {
-      title.classList.add("visible");
+  if (title) { // Verifica si el título existe antes de hacer cualquier cosa
+    function checkVisibility() {
+      if (isVisible(title)) {
+        title.classList.add("visible");
+      }
     }
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility();
   }
-
-  // JS DETECTA MOVIMIENTO SCROLL
-  window.addEventListener("scroll", checkVisibility);
-
-  // JS LLAMADO DE VERIFICACION
-  checkVisibility();
 });
 
-
-
+// JS PARA TARJETAS
 document.addEventListener("DOMContentLoaded", function () {
   const valueCards = document.querySelectorAll(".silpa-value-card");
 
-  // JS VERIFICAR SI SE VISUALIZA
-  function isVisible(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom > 0;
+  if (valueCards.length > 0) { // Verifica si hay tarjetas
+    function handleScroll() {
+      valueCards.forEach((card) => {
+        if (isVisible(card)) {
+          card.classList.add("visible");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Llamado inicial para mostrar tarjetas al cargar
   }
-
-  // JS PARA TARJETAS
-  function handleScroll() {
-    valueCards.forEach((card) => {
-      if (isVisible(card)) {
-        card.classList.add("visible");
-      }
-    });
-  }
-
-  // JS DETECTA MOVIMIENTO SCROLL
-  window.addEventListener("scroll", handleScroll);
-
-  0
-
-  
-  // JS LLAMADO DE VERIFICACION
-  handleScroll();
 });
+

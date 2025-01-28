@@ -26,6 +26,91 @@ body, html {
   overflow-x: hidden; /* Prevenir el scroll horizontal */
 }
 
+/* HEADER */
+.silpa-header {
+  background-color: white;
+  color: #fff;
+  padding: 6px 0;
+}
+
+.silpa-header__container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.silpa-header__logo img {
+  background-color: #ffffff;
+  width: 280px;
+  height: 80px;
+}
+
+/* NAVEGACIÓN */
+.silpa-header__nav {
+  display: flex;
+  gap: 20px;
+}
+
+.silpa-header__menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.silpa-header__menu-item a {
+  font-size: 1.1em;
+  color: var(--color-dark);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.silpa-header__menu-item a:hover {
+  color: #3498db; /* Puedes elegir un azul más brillante */
+}
+
+/* BOTONES */
+.silpa-btn {
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.silpa-btn--primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  margin-right: 25px;
+}
+
+.silpa-btn--primary:hover {
+  background-color: #007a99;
+}
+
+.silpa-btn--secondary {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+.silpa-btn--secondary:hover {
+  background-color: #8fb858;
+}
+
+/* MENÚ RESPONSIVO */
+.silpa-header__menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+}
 
 /* INICIO SILPA */
 
@@ -210,7 +295,7 @@ section{
   align-items: center;
   margin-bottom: 30px;
   border: 2px dashed  var(--color-secondary); /* Borde suave translúcido */
-  padding: 10px;
+  padding: 25px;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -584,14 +669,11 @@ section{
 
 .CotizarServicio{
   text-decoration: none;
+  padding: 7px 10px;
   border-radius: 5px;
-  padding: 10px 10px;
   background-color: var(--color-light);
   color: var(--color-dark);
   transition: background 0.3s ease;
-  display: inline-flex;
-  font-size: 0.8em;
-  justify-content: center;
 }
 
 .CotizarServicio:hover{
@@ -605,312 +687,143 @@ section{
 }
 
 .telefono-icono{
-  display: flex;
-  width: 25%;
-  height: auto;
-}
-
-
-
-
-
-/* NUEVO SERVICIO */
-
-/* Estilo de la sección de servicios */
-
-.SILPA-servicios-fila {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.SILPA-servicios-categoria {
-  flex: 1;
-  min-width: 300px;
-}
-
-.SILPA-servicios-grid {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.SILPA-servicios-section {
-  background-color: var(--color-dark);
-}
-
-.SILPA-servicios-titulo h2 {
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.SILPA-destacado {
-  color: var(--color-accent); /* Puedes ajustar el color a tu preferencia */
-}
-
-.SILPA-servicios-grid {
-  display: flex;
-  justify-content: space-around;
-  gap: 30px;
-}
-
-.SILPA-categoria-servicio {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 30%;
-}
-
-.SILPA-categoria-servicio h3 {
-  font-size: 24px;
-  color: var(--color-dark);
-  margin-bottom: 15px;
-}
-
-.SILPA-categoria-servicio ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.SILPA-categoria-servicio li {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-/* Estilo general de la sección */
-.SILPA-servicios-section {
-  text-align: center;
-}
-
-/* Título de la sección */
-.SILPA-servicios-titulo h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 4px rgb(0, 0, 0);
-}
-
-.SILPA-servicios-titulo .SILPA-destacado {
-  color: #5dbf5e; /* Color destacado */
-}
-
-/* Estilo de las categorías de servicios */
-.SILPA-servicios-categoria {
-  margin-bottom: 40px;
-}
-
-.SILPA-categoria-titulo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: white;
-}
-
-/* Contenedor de las tarjetas */
-.SILPA-servicios-grid {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* Estilo de las tarjetas de los servicios */
-.SILPA-servicio-card {
-  position: relative;
-  width: 200px;
-  height: 260px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  perspective: 1000px;
-  transition: transform 0.5s ease-in-out;
-  overflow: hidden;
-}
-
-.SILPA-servicio-card:hover {
-  transform: scale(1.05); /* Escala la tarjeta al pasar el ratón */
-}
-
-.SILPA-servicio-front,
-.SILPA-servicio-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.SILPA-servicio-front img {
-  width: 80%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.SILPA-servicio-front h3 {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: #333;
-}
-
-/* Estilo del reverso de la tarjeta */
-.SILPA-servicio-back {
-  background-color: #f4f4f4;
-  padding: 20px;
-  transform: rotateY(180deg);
-}
-
-.SILPA-servicio-card:hover .SILPA-servicio-front {
-  transform: rotateY(180deg); /* Rota el frente al hacer hover */
-}
-
-.SILPA-servicio-card:hover .SILPA-servicio-back {
-  transform: rotateY(0deg); /* Muestra el reverso */
-}
-
-.SILPA-servicio-back p {
-  font-size: 1rem;
-  text-align: justify;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.SILPA-servicio-links {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-
-.SILPA-ver-mas{
-  display: inline-flex;
-  text-decoration: none;
-  border-radius: 5px;
-  background-color: #5dbf5e;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  transition: background-color 0.3s ease; 
-  padding: 5px 5px;
-  align-items: center;
-}
-
-.SILPA-ver-mas:hover{
-  background-color: #4c9c47;
-}
-
-/* Estilo para el hover de los enlaces */
-.SILPA-servicio-links a:hover {
-  background-color: #007a99;
-  font-weight: bold;
-}
-
-.SILPA-servicios-section{
   height: auto;
 }
 
 
+/* FOOTER */
 
-/* COMO TRABAJAMOS */
+/* FOOTER */
 
-/* General Styles */
-.silpa-trabajo-section {
+footer {
   background-color: #333;
-  padding: 40px 15px;
-  height: auto;
+  color: #fff;
+  padding: 20px 10px;
+  box-sizing: border-box;
 }
 
-.silpa-container {
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
-  text-align: center;
 }
 
-/* Title Styles */
-.silpa-trabajo-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  color: #29bcec;
-}
-
-/* Description Styles */
-.silpa-trabajo-description {
-  font-size: 1.125rem;
-  color: #ffffff;
-  margin-bottom: 40px;
-  line-height: 1.6;
-}
-
-/* Cards Container */
-.silpa-trabajo-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 20px;
-}
-
-/* Card Styles */
-.silpa-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #ccc; /* Opcional: borde para definir el card */
-  border-radius: 10px;
-  background-color: #ceff79;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 15px rgba(206, 255, 121, 0.6);
-
-}
-
-.silpa-card:hover{
-  transform: scale(1.05); 
-  box-shadow: 0 4px 6px #c5d0ff;
-}
-
-.silpa-card:hover .silpa-card-icono{
-  filter: invert(71%) sepia(77%) saturate(711%) hue-rotate(356deg) brightness(103%) contrast(108%);
-}
-
-.silpa-card-icono{
-  width: 50%;
-  height: auto;
-  margin-bottom: 10px; /* Espacio entre la imagen y el título */
-  object-fit: contain; 
-}
-
-.silpa-card-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 10px;
-}
-
-.silpa-card-description {
-  font-size: 1rem;
-  color: rgb(0, 0, 0);
-  line-height: 1.5;
+.descripcionFooter{
   text-align: justify;
+  width: 90%;
 }
 
+.footerLogo {
+  width: 100%;
+  height: auto;
+}
 
+.iconInfo{
+  margin-left: 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #50c5f3;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 11px;
+  font-size: 14px;
+}
+
+.footer-column ul li a {
+  display: flex;
+  align-items: center; /* Alinea los íconos y el texto verticalmente */
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a img {
+  margin-right: 8px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(242deg) brightness(114%) contrast(101%);
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+  color: #d4ff00; /* Cambiar color en hover */
+  transform: scale(1.2); /* Aumenta ligeramente el tamaño del ícono */
+  transform-origin: left;
+  font-weight: bold;
+}
+
+.footer-column ul li a:hover img{
+  filter: invert(94%) sepia(46%) saturate(4167%) hue-rotate(13deg) brightness(104%) contrast(102%);
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño del ícono */
+}
+
+.footer-column .social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-column .social-icons img {
+  width: 54px;
+  height: 54px;
+  transition: transform 0.3s ease; /* Efecto al pasar el mouse */
+}
+
+.footer-column .social-icons img:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño del ícono */
+}
+
+.map-container iframe {
+  border: none;
+  border-radius: 25px;
+  width: 100%; /* Asegura que el iframe ocupe el 100% del contenedor */
+  height: 235px; /* Ajusta la altura del mapa */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Una columna en pantallas aún más pequeñas */
+  }
+
+  .footer-column h4 {
+    font-size: 16px; /* Reduce el tamaño del encabezado */
+  }
+
+  .footer-column ul li {
+    font-size: 12px; /* Reduce el tamaño del texto */
+  }
+
+  .descripcionFooter{
+    text-align: justify;
+    width: 100%;
+  }
+
+  .footer-column h4 {
+    font-size: 1.5em;
+    text-align: center;
+}
+}
 
 
 @media (max-width: 768px) {
@@ -923,14 +836,6 @@ section{
     right: 0;
     width: 100%;
     padding: 20px;
-  }
-
-  .SILPA-ver-mas {
-    padding: 5px 5px;
-  }
-
-  .CotizarServicio {
-    padding: 5px 5px;
   }
 
   .silpa-header__menu {
@@ -959,10 +864,11 @@ section{
 
   .silpa-mission-vision {
     margin-bottom: 20px;
-  }
+}
+
 
   .silpa-mission-vision {
-    padding: 10px;
+    padding: 15px;
   }
 
   .silpa-full-column{
@@ -980,9 +886,7 @@ section{
     padding: 10px;
   }
 
-  .SILPA-servicio-card {
-    width: 170px;
-  } 
+
 
   .content-wave {
     height: 18vh; /* Ajusta la altura de la ola */
@@ -1000,29 +904,85 @@ section{
     text-shadow: 1px 1px 4px rgb(0, 0, 0);
   }
 
-  .SILPA-servicio-back p {
-    font-size: 0.9rem;
-    text-align: justify;
-    color: #555;
-    margin-bottom: 5px;
+  .SILPA-SERVICIO-TITULO {
+    font-size: 0.6em;
+    height: 50px;
+    margin-bottom: 10px;
   }
 
-  .SILPA-servicio-links {
+  .SILPA-SERVICIO-ROTADO {
+    position: relative;
+    margin-top: auto;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    padding: 8px;
+  }
+
+  .SILPA-SERVICIO-ROTADO p {
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+  .SILPA-SERVICIOS-CONTENEDOR {
+    margin-top: 10px;
+  }
+
+  .SILPA-SERVICIO-CUADRO-CONTENEDOR {
+    width: 38%;
+    margin: 0;
+    gap: 15px;
+    height: 220px;
+    position: relative; /* Necesario para posicionar elementos dentro */
+  }
+  .SILPA-SERVICIO-CUADRO-CONTENEDOR .SILPA-SERVICIO-IMAGEN{
+    height: 100%;
+  }
+
+  .SILPA-SERVICIO-IMAGEN {
+    width: 100%;
+    top: 15px;
+  }
+
+  .SILPA-SERVICIO-IMAGEN img {
+    width: 100%;
+    
+    margin-top: 10px; 
+    height: 80%;
+  }
+
+
+  .SILPA-SERVICIO-ROTADO .links {
     display: block;
-    align-items: center;
-    text-align: center;
+  }
+  .SILPA-SERVICIO-ROTADO .links {
+    display: block;
+  }   
+
+  .SILPA-SERVICIO-ROTADO p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limita el texto a 3 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* Oculta el contenido extra */
+    text-overflow: ellipsis; /* Agrega los puntos suspensivos */
+    margin: 0;
+    padding: 0 8px; /* Espacio interno alrededor del texto */
+    font-size: 0.9em;
+    line-height: 1.4;
   }
 
-  .SILPA-servicio-links a{
-    width: 80%;
-    margin: 5px;
+  .servicios-silpa{
+    height: auto;
+    padding-bottom: 5px;
   }
+
+  .links a{
+    margin-top: 10px;
+  }
+
+  .footer-column h4 {
+    font-size: 1.5em;
+    text-align: center;
+}
 
 } 
-
-@media (max-width: 480px) {
-  .silpa-trabajo-description {
-    text-align: justify;
-  }
-}
 
