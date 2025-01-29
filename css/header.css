@@ -30,8 +30,10 @@
   .silpa-header {
     background-color: white;
     color: #fff;
-    padding: 6px 0;
+    padding: 10px 0;
   }
+
+
   
   .silpa-header__container {
     max-width: 1200px;
@@ -102,43 +104,108 @@
     background-color: #8fb858;
   }
   
-  /* MENÚ RESPONSIVO */
-  .silpa-header__menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: var(--color-white);
-    cursor: pointer;
+  /* MENU RESPONSIVO */
+.silpa-header__menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.silpa-header__close-btn {
+  display: none; /* Ocultarlo por defecto */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--color-dark);
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+/* Fondo oscuro que aparece detrás del modal */
+.silpa-header__overlay {
+  display: none; /* Asegurarnos que esté oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+  z-index: 999; /* Aseguramos que esté debajo del menú pero encima del contenido */
+}
+
+/* Al activar la clase "active", el menú será visible y también el overlay */
+.silpa-header__nav.active + .silpa-header__overlay {
+  display: block;
+}
+
+/* Estilo del menú para dispositivos pequeños (móviles) */
+/* MENU RESPONSIVO */
+@media (max-width: 768px) {
+  .silpa-header__nav {
+    display: none; /* Ocultamos el menú por defecto */
+    flex-direction: column;
+    position: fixed; /* Fijamos el menú al centro */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajustamos para que se centre en ambos ejes */
+    width: 80%; /* Ajusta el ancho */
+    max-width: 400px; /* Limitamos el ancho máximo */
+    height: 345px;
+    border-radius: 35px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Aseguramos que esté encima del overlay */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    opacity: 0; /* Ocultamos el menú inicialmente */
+    visibility: hidden; /* Lo ocultamos */
+    background-color: #368fad;
+    border: 2px solid black;
+  }
+
+  .silpa-header__menu-item a:hover {
+    color: var(--color-primary); 
+    font-weight: bold;
+    border-bottom: 2px solid black;
   }
 
 
-@media (max-width: 768px) {
-    .silpa-header__nav {
-      display: none;
-      flex-direction: column;
-      background-color: var(--color-primary);
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 100%;
-      padding: 20px;
-    }
-  
-    .silpa-header__menu {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .silpa-header__menu-item {
-      text-align: center;
-    }
-  
-    .silpa-header__menu-toggle {
-      display: block;
-    }
-  
-    .silpa-header__nav.active {
-      display: flex;
-    }
+  .silpa-header__close-btn {
+    display: block; /* Mostramos el botón de cerrar */
+  }
+
+  .silpa-header__menu {
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .silpa-header__menu-item a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .silpa-header__menu-toggle {
+    display: block; /* Mostrar el botón de hamburguesa */
+  }
+
+  /* Al activar la clase "active", el menú será visible */
+  .silpa-header__nav.active {
+    display: flex;
+    opacity: 1; /* Mostramos el menú */
+    visibility: visible; /* Lo hacemos visible */
+    transition: opacity 0.3s ease;
+  }
+
+  .silpa-header__overlay {
+    display: block; /* Mostrar el fondo oscuro cuando el menú esté activo */
+  }
 }

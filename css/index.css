@@ -911,19 +911,78 @@ section{
 }
 
 
+/* BANNER CONTACTO */
+
+.banner-contacto {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten al tamaño de la pantalla */
+  width: 100%; /* Ocupa todo el ancho */
+  height: 300px; /* Altura fija de 300px */
+}
+
+.imagen-banner {
+  flex: 1; /* La imagen ocupa 1/2 del espacio */
+  background-image: url('../img/banner2.png');
+  background-size: cover;
+  background-position: center;
+  height: auto; /* Asegura que la imagen ocupe toda la altura */
+  width: 100%;
+}
+
+.contenido-banner {
+  flex: 0.5; /* Ocupa el otro 1/2 del espacio */
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro para mejor visibilidad */
+  color: white;
+  padding: 20px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-banner h2{
+  text-align: center;
+}
+
+.boton-contacto {
+  background-color: #ff5733;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 10px;
+  width: 250px;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.boton-contacto:hover {
+  background-color: #d94420;
+  transform: scale(1.1);
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .banner-contacto {
+      flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+      height: auto; /* Deja que la altura se ajuste al contenido */
+  }
+
+  .imagen-banner {
+      height: 200px; /* Altura de imagen en pantallas pequeñas */
+  }
+
+  .contenido-banner {
+      text-align: left; /* Ajusta el texto a la izquierda */
+  }
+}
+
+
 
 
 @media (max-width: 768px) {
-  .silpa-header__nav {
-    display: none;
-    flex-direction: column;
-    background-color: var(--color-primary);
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    padding: 20px;
-  }
 
   .SILPA-ver-mas {
     padding: 5px 5px;

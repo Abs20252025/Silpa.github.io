@@ -7,12 +7,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $to = "digitador@absequiposcontraincendios.com.pe"; // Cambia esto al correo donde recibirás los mensajes
     $subject = "Nuevo mensaje de contacto de: $nombre";
     $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-type: text/plain; charset=UTF-8\r\n";
+    $headers = "Reply-To: $email\r\n";
+    $headers = "Content-type: text/plain; charset=UTF-8\r\n";
 
     $body = "Nombre: $nombre\n";
-    $body .= "Correo: $email\n\n";
-    $body .= "Mensaje:\n$mensaje\n";
+    $body = "Correo: $email\n\n";
+    $body = "Mensaje:\n$mensaje\n";
 
     if (mail($to, $subject, $body, $headers)) {
         echo "Mensaje enviado con éxito.";
