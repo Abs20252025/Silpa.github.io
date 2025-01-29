@@ -629,14 +629,6 @@ section{
   flex: 1;
   min-width: 300px;
 }
-
-.SILPA-servicios-grid {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .SILPA-servicios-section {
   background-color: var(--color-dark);
 }
@@ -650,12 +642,6 @@ section{
 
 .SILPA-destacado {
   color: var(--color-accent); /* Puedes ajustar el color a tu preferencia */
-}
-
-.SILPA-servicios-grid {
-  display: flex;
-  justify-content: space-around;
-  gap: 30px;
 }
 
 .SILPA-categoria-servicio {
@@ -1039,10 +1025,6 @@ section{
     padding: 10px;
   }
 
-  .SILPA-servicio-card {
-    width: 170px;
-  } 
-
   .content-wave {
     height: 18vh; /* Ajusta la altura de la ola */
     display: flex;
@@ -1063,7 +1045,7 @@ section{
     font-size: 0.9rem;
     text-align: justify;
     color: #555;
-    margin-bottom: 5px;
+    margin-bottom: 0;
   }
 
   .SILPA-servicio-links {
@@ -1075,6 +1057,15 @@ section{
   .SILPA-servicio-links a{
     width: 80%;
     margin: 5px;
+  }
+
+  .SILPA-servicios-grid {
+    gap: 10px;
+  }
+
+  .SILPA-servicio-card {
+    height: 240px;
+    width: 170px;
   }
 
 } 
