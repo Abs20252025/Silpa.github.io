@@ -899,6 +899,10 @@ section{
 
 /* BANNER CONTACTO */
 
+.bannerContacto{
+  height: auto;
+}
+
 .banner-contacto {
   display: flex;
   flex-wrap: wrap; /* Permite que los elementos se ajusten al tamaño de la pantalla */
@@ -927,6 +931,10 @@ section{
 }
 
 .contenido-banner h2{
+  text-align: center;
+}
+
+.contenido-banner p{
   text-align: center;
 }
 
@@ -961,7 +969,7 @@ section{
   }
 
   .contenido-banner {
-      text-align: left; /* Ajusta el texto a la izquierda */
+      text-align: left;
   }
 }
 
