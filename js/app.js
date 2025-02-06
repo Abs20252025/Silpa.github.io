@@ -101,3 +101,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sectionServicios = document.querySelector("#servicios");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          sectionServicios.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    },
+    {
+      root: null, // Usa el viewport
+      threshold: 0.75, // Activa cuando el 50% de la sección es visible
+    }
+  );
+
+  observer.observe(sectionServicios);
+});
+
