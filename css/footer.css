@@ -143,3 +143,53 @@ footer {
       text-align: center;
     }
   }
+  
+  @media (min-width: 1430px) {
+    .footer-container {
+      max-width: 1400px; /* Ajusta el ancho del footer */
+      gap: 30px;
+    }
+  
+    .footer-column h4 {
+      font-size: 24px;
+    }
+  
+    .footer-column ul li {
+      font-size: 18px;
+    }
+  
+    .footer-column ul li a {
+      font-size: 18px;
+    }
+  
+    .footer-column ul li a img {
+      width: 45px;
+      height: 45px;
+    }
+  
+    .footer-column .social-icons img {
+      width: 58px;
+      height: 58px;
+    }
+  
+    .descripcionFooter {
+      font-size: 18px;
+    }
+  
+    .footerLogo {
+      max-width: 320px;
+    }
+  
+    .map-container iframe {
+      height: 320px;
+    }
+
+    .footer-column ul li a .RataIcon {
+      width: 25px;
+      height: 25px;
+    }
+
+  }
+  
+
+  

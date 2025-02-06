@@ -98,7 +98,7 @@
 }
 
 .silpa-mission-vision:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   /* Agranda la tarjeta al pasar el ratón */
   box-shadow: 0 4px 6px #9ec35f;
   background-color: rgba(255, 255, 255, 0.973);
@@ -114,7 +114,6 @@
 }
 
 .silpa-mission-text {
-  max-width: 500px;
   color: black;
 }
 
@@ -346,7 +345,8 @@
   .silpa-mission-text img {
     width: 65px;
     height: auto;
-    margin-right: 10px; /* Espacio entre imagen y texto */
+    margin-right: 10px;
+    /* Espacio entre imagen y texto */
   }
 
   .silpa-mission-vision {
@@ -357,13 +357,14 @@
     padding: 10px;
   }
 
-  .silpa-full-column{
+  .silpa-full-column {
     padding: 15px;
   }
 
   .silpa-values-cards {
     gap: 15px;
   }
+
   .silpa-value-card h4 {
     margin-bottom: 0;
   }
@@ -425,4 +426,153 @@
   .ventaja-texto-silpa {
     font-size: 0.9em;
   }
+}
+
+@media (min-width: 1400px) {
+  .silpa-row {
+    background: var(--color-dark);
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(255, 255, 255);
+    background-color: var(--color-dark);
+  }
+
+  .silpa-row h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  }
+
+  /* Estilo inicial del título (invisible y desplazado) */
+  .silpa-row h3 {
+    transform: translateY(20px);
+    /* Desplazamiento hacia abajo */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  /* Estilo cuando el título se vuelve visible */
+  .silpa-row h3.visible {
+    opacity: 1;
+    transform: translateY(0);
+    /* Regresa a su posición original */
+  }
+
+  /* Columnas de la fila */
+  .silpa-column {
+    flex: 1;
+    padding: 10px 20px 5px 20px;
+    box-sizing: border-box;
+  }
+
+  /* Columna izquierda con la imagen */
+  .silpa-left {
+    text-align: center;
+  }
+
+  .silpa-left p {
+    text-align: justify;
+    font-size: 1.3em;
+  }
+
+  .silpa-image {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 5px;
+    height: auto;
+    border-radius: 25px;
+  }
+
+  .silpa-image:hover {
+    transform: scale(1.05);
+    /* Agranda la tarjeta al pasar el ratón */
+  }
+
+  /* Estructura de misión y visión con imagen al lado izquierdo */
+  .silpa-mission-vision {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .silpa-mission-vision h3 {
+    font-size: 1.8em;
+  }
+
+  .silpa-mission-vision p {
+    font-size: 1.3em;
+  }
+
+  .silpa-value-card h4 {
+    font-size: 1.5em;
+  }
+  
+  .silpa-value-card p {
+    font-size: 1.4em;
+    color: #252323;
+    text-align: justify;
+  }
+
+  .Elegirnos-silpa {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+  }
+  
+  .container-silpa {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .row-silpa {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Alineación superior para evitar que se mueva la imagen */
+  }
+  
+  .titulo-silpa {
+    font-size: 2.4em;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .subtitulo-silpa {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 8px;
+    text-align: justify;
+  }
+  
+  .ventajas-silpa {
+    margin-top: 10px;
+  }
+  
+  .ventaja-silpa {
+    margin-bottom: 10px;
+  }
+  
+  .ventaja-titulo-silpa {
+    color: #007bff;
+    font-size: 1.5em;
+  }
+  
+  .ventaja-texto-silpa {
+    color: #555;
+    font-size: 1.3em;
+    text-align: justify;
+  }
+  
+  .imagen-servicio-silpa {
+    width: 85%;
+    height: auto;
+    max-width: 500px;
+    /* Limitar el tamaño máximo de la imagen */
+    border-radius: 38px;
+    display: block;
+    margin-left: auto;
+    /* Centra la imagen dentro de la columna */
+    margin-right: auto;
+    /* Centra la imagen dentro de la columna */
+  }
+
 }
