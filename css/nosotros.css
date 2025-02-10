@@ -143,6 +143,7 @@
   background-image: url('../img/fondo-valores.jpg');
   background-size: cover;
   text-align: center;
+  background-position: center;
 }
 
 .silpa-full-column h3 {

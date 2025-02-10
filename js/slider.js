@@ -1,4 +1,15 @@
+// ANIMACIÓN DEL HEADER
 
+document.addEventListener("DOMContentLoaded", () => {
+    // Agregamos la clase "animated" después de un pequeño retraso
+    setTimeout(() => {
+      document.querySelector(".silpa-header").classList.add("animated");
+    }, 300);
+    setTimeout(() => {
+      document.querySelector(".inicio-silpa").classList.add("animated");
+    }); // Se activa 2 segundos después del header
+  });
+  
 
 
 // JS PARA EL SLIDER INICIO
@@ -83,29 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   
     elements.forEach((el) => observer.observe(el));
-  });
-  
-//ANIMACION BANNER
-
-document.addEventListener("DOMContentLoaded", function () {
-    const banner = document.querySelector(".banner-contacto");
-    const imagen = document.querySelector(".imagen-banner");
-    const contenido = document.querySelector(".contenido-banner");
-  
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            banner.classList.add("show");
-            imagen.classList.add("show");
-            contenido.classList.add("show");
-          }
-        });
-      },
-      { threshold: 0.5 } // Se activará cuando el 50% del banner esté visible
-    );
-  
-    observer.observe(banner);
   });
   
 //ANIMACION BANNER
