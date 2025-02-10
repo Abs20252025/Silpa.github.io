@@ -5,8 +5,5 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       document.querySelector(".silpa-header").classList.add("animated");
     }, 300);
-    setTimeout(() => {
-      document.querySelector(".inicio-silpa").classList.add("animated");
-    }); // Se activa 2 segundos después del header
   });
   
