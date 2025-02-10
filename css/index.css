@@ -36,28 +36,28 @@ html {
 
 
 /* INICIO SILPA */
-
 .inicio-silpa {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  background: black;
 }
 
 /* Estilo para cada slide */
 .slider {
   display: flex;
   height: 100%;
-  transition: transform 1s ease-in-out;
 }
 
 .slide {
   min-width: 100%;
-  /* Cada slide ocupará el 100% del ancho de la pantalla */
   height: 100%;
   background-size: cover;
   background-position: center;
   position: relative;
+  opacity: 0; /* Oculta la imagen al inicio */
+  animation: fadeInImage 2s ease-in-out forwards;
 }
 
 /* Cambiar la imagen de fondo de cada slide */
@@ -66,14 +66,24 @@ html {
 }
 
 .slide:nth-child(2) {
-  background-image: url('../img/Silpa-Inicio.jpg');
+  background-image: url('../img/banner1.png');
 }
 
 .slide:nth-child(3) {
-  background-image: url('../img/Silpa-Inicio.jpg');
+  background-image: url('../img/asesoria.webp');
 }
 
-/* Estilo del texto sobre el slider */
+/* Animación para que la imagen aparezca suavemente */
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mantener el contenido completamente oculto hasta que la imagen termine */
 .slide-content {
   position: absolute;
   top: 50%;
@@ -82,23 +92,47 @@ html {
   text-align: center;
   color: #fff;
   padding: 20px;
+  opacity: 0;
+  visibility: hidden; /* Asegura que no se vea en absoluto */
 }
 
-.slide-content h1 {
+/* Mostrar el contenido después de la imagen */
+.inicio-silpa.animated .slide-content {
+  visibility: visible;
+  animation: fadeInText 0.5s ease-in-out 2s forwards;
+}
+
+/* Animación para hacer visible el contenido */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animaciones individuales después de que el contenido sea visible */
+.inicio-silpa.animated .slide-content h1 {
+  opacity: 0;
   font-size: 3rem;
   margin-bottom: 10px;
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  animation: slideInDown 1s ease-out 1.5s forwards;
 }
 
-.slide-content p {
+.inicio-silpa.animated .slide-content p {
+  opacity: 0;
   font-size: 1.5rem;
   margin-bottom: 20px;
+  animation: slideInLeft 1s ease-out 2s forwards;
 }
 
-.slide-content .btn-primary,
-.slide-content .btn-secondary {
+.inicio-silpa.animated .slide-content .btn-primary,
+.inicio-silpa.animated .slide-content .btn-secondary {
+  opacity: 0;
   display: inline-block;
   padding: 15px 30px;
   border-radius: 5px;
@@ -106,6 +140,7 @@ html {
   font-weight: bold;
   margin: 10px;
   text-align: center;
+  animation: slideInUp 1s ease-out 2.5s forwards;
 }
 
 .slide-content .btn-primary {
@@ -125,6 +160,42 @@ html {
 .slide-content .btn-secondary:hover {
   background-color: #8fb858;
 }
+
+/* Animaciones de entrada */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 /* SERVICIOS SILPA */
 
@@ -468,10 +539,6 @@ section {
   box-shadow: 0 4px 6px #c5d0ff;
 }
 
-.silpa-card:hover .silpa-card-icono {
-  filter: invert(71%) sepia(77%) saturate(711%) hue-rotate(356deg) brightness(103%) contrast(108%);
-}
-
 .silpa-card-icono {
   width: 50%;
   height: auto;
@@ -494,8 +561,34 @@ section {
   text-align: justify;
 }
 
-/* BANNER CONTACTO */
+.silpa-trabajo-title,
+.silpa-trabajo-description,
+.silpa-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
+/* Cuando el elemento es visible */
+.silpa-trabajo-title.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.silpa-trabajo-description.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+/* Animación escalonada para las cards */
+.silpa-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* BANNER CONTACTO */
 .bannerContacto {
   height: auto;
 }
@@ -503,29 +596,28 @@ section {
 .banner-contacto {
   display: flex;
   flex-wrap: wrap;
-  /* Permite que los elementos se ajusten al tamaño de la pantalla */
   width: 100%;
-  /* Ocupa todo el ancho */
   height: 300px;
-  /* Altura fija de 300px */
+  opacity: 1; /* Siempre visible */
+  background: rgba(0, 0, 0, 0.7);
 }
 
+/* Imagen: empieza oculta y se desliza desde la izquierda */
 .imagen-banner {
   flex: 1;
-  /* La imagen ocupa 1/2 del espacio */
   background-image: url('../img/banner2.png');
   background-size: cover;
   background-position: center;
   height: auto;
-  /* Asegura que la imagen ocupe toda la altura */
   width: 100%;
+  opacity: 0;
+  transform: translateX(-500px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
+/* Contenedor de texto y botón */
 .contenido-banner {
   flex: 0.5;
-  /* Ocupa el otro 1/2 del espacio */
-  background: rgba(0, 0, 0, 0.7);
-  /* Fondo oscuro para mejor visibilidad */
   color: white;
   padding: 20px;
   display: flex;
@@ -534,6 +626,47 @@ section {
   align-items: center;
 }
 
+/* Ocultar los textos y el botón al inicio */
+.contenido-banner h2,
+.contenido-banner p{
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.contenido-banner .boton-contacto{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Activar animaciones cuando aparecen en pantalla */
+.imagen-banner.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contenido-banner.show h2 {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+.contenido-banner.show p {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.6s;
+}
+
+.contenido-banner.show .boton-contacto {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.9s;
+  visibility: visible;
+}
+
+/* Estilos de texto */
 .contenido-banner h2 {
   font-size: 1.5em;
   text-align: center;
@@ -544,6 +677,7 @@ section {
   font-size: 1.5em;
 }
 
+/* Botón de contacto */
 .boton-contacto {
   background-color: #ff5733;
   color: white;
@@ -562,6 +696,8 @@ section {
   background-color: #d94420;
   transform: scale(1.1);
 }
+
+
 
 /* Estilos responsivos para pantallas más pequeñas */
 @media (max-width: 768px) {
@@ -742,7 +878,7 @@ section {
     gap: 20px;
   }
 
-  .SILPA-categoria-titulo{
+  .SILPA-categoria-titulo {
     font-size: 2rem;
   }
 
@@ -756,6 +892,7 @@ section {
     height: 235px;
     /* Aumenta la altura */
   }
+ 
 }
 
 
@@ -763,9 +900,9 @@ section {
 @media (min-width: 1900px) {
 
   .SILPA-servicio-card {
-    width: 320px;
+    width: 300px;
     /* Aumenta el ancho */
-    height: 345px;
+    height: 335px;
     /* Aumenta la altura */
   }
 
@@ -773,18 +910,5 @@ section {
     font-size: 1.4rem;
   }
 
-}
-
-@media (min-width: 2050px) {
-
-  .SILPA-servicio-card {
-    width: 370px;
-    /* Aumenta el ancho */
-    height: 450px;
-    /* Aumenta la altura */
-  }
-
-  .SILPA-servicio-front h3 {
-    font-size: 1.8rem;
-  }
+  
 }

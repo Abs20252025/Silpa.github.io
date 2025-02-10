@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       root: null, // Usa el viewport
-      threshold: 0.75, // Activa cuando el 50% de la sección es visible
+      threshold: 0.75, // Activa cuando el 75% de la sección es visible
     }
   );
 
