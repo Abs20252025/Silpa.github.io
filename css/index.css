@@ -128,7 +128,8 @@ html {
 }
 
 .inicio-silpa.animated .slide-content p {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra negra */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* Sombra negra */
   opacity: 0;
   font-size: 1.5rem;
   font-weight: bold;
@@ -730,19 +731,32 @@ section {
   }
 }
 
-@media (max-width: 896px){
-  .inicio-silpa.animated .slide-content h1{
+@media (max-width: 896px) {
+  .slide {
+    height: auto;
+    /* Permite que crezca si es necesario */
+    min-height: 100vh;
+    /* Asegura que tenga al menos el alto de la pantalla */
+    display: flex;
+    align-items: center;
+    /* Centra el contenido */
+    justify-content: center;
+  }
+
+  .inicio-silpa.animated .slide-content h1 {
     font-size: 1.5rem;
   }
 
-  .inicio-silpa.animated .slide-content p{
+  .inicio-silpa.animated .slide-content p {
     font-size: 1rem;
+    margin-bottom: 0px;
   }
 }
 
 @media screen and (max-aspect-ratio: 16/9) {
   .inicio-silpa {
-    height: auto; /* Permite que crezca si es necesario */
+    height: auto;
+    /* Permite que crezca si es necesario */
     min-height: 100vh;
   }
 
@@ -853,7 +867,7 @@ section {
     width: 170px;
   }
 
-  
+
 }
 
 @media (max-width: 480px) {
@@ -878,7 +892,7 @@ section {
     font-size: 1.5em;
   }
 
-  
+
 
 }
 
@@ -938,7 +952,7 @@ section {
     font-size: 1.2rem;
   }
 
-  .SILPA-servicio-links a{
+  .SILPA-servicio-links a {
     padding: 7px;
     font-size: 1.2rem;
   }
@@ -959,14 +973,15 @@ section {
     font-size: 1.4rem;
   }
 
-  .SILPA-servicio-links a{
+  .SILPA-servicio-links a {
     padding: 10px;
     font-size: 1.5rem;
   }
 
   .SILPA-servicio-card .SILPA-servicio-back p {
-    font-size: 1.5rem; /* Ajusta según el tamaño de pantalla */
+    font-size: 1.5rem;
+    /* Ajusta según el tamaño de pantalla */
   }
-  
+
 
 }
