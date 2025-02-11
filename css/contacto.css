@@ -1,5 +1,5 @@
   #contacto {
-    padding: 40px;
+    padding: 10px 40px;
     background-color: #f4f4f4;
   }
 
@@ -26,7 +26,7 @@
     /* Ancho máximo */
     margin: 0 auto;
     /* Centrar */
-    padding: 20px;
+    padding: 10px;
   }
 
   /* Card del formulario */
@@ -49,7 +49,7 @@
   .formulario-contacto input,
   .formulario-contacto textarea {
     width: 100%;
-    padding: 20px;
+    padding: 13px;
     border: 1px solid #ddd;
     border-radius: 5px;
   }

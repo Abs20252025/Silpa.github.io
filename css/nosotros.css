@@ -29,7 +29,7 @@
 .silpa-row h2 {
   font-size: 2em;
   text-transform: uppercase;
-  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  text-shadow: 4px 1px 4px rgb(0, 0, 0);
 }
 
 /* Estilo inicial del título (invisible y desplazado) */
@@ -154,7 +154,8 @@
   padding-top: 5px;
   text-transform: uppercase;
   /* Para un diseño más uniforme */
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 4px 1px 4px rgb(0, 0, 0);
+  animation: parpadeo-elegir 1s infinite alternate;
   /* Sombra para mejor legibilidad */
 }
 
@@ -264,78 +265,168 @@
   /* Regresa a su posición inicial */
 }
 
-.Elegirnos-silpa {
-  padding: 40px 0;
-  background-color: #f4f4f4;
+/* INICIO DE SECTION ELIGENOS */
+#contenidoElegir {
+  background: linear-gradient(rgb(37 97 47 / 70%), rgb(17 51 18 / 70%));
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-.container-silpa {
-  width: 80%;
+/* TITULO H2 */
+.contenedor h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 3px #0e0b0b,
+    0 0 7px #0a0404,
+    0 0 15px #0a0909,
+    0 0 25px #0a0505;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.contenedor h2 span {
+  color: #50c5f3;
+}
+
+/* ANIMACIÓN DEL TITULO CUANDO SE MUESTRA */
+.contenedor h2.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.row-silpa {
+/* ANIMACIÓN DEL TEXTO DESDE LA IZQUIERDA */
+.texto {
+  flex: 1;
+  max-width: 65%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.texto.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ANIMACIÓN DE LA IMAGEN DESDE LA DERECHA */
+.imagen {
+  flex: 1;
+  max-width: 35%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  /* Alineación superior para evitar que se mueva la imagen */
+  align-items: center;
+  justify-content: center;
 }
 
-.col-left-silpa {
-  width: 50%;
-  padding-right: 30px;
-}
-
-.col-right-silpa {
-  width: 50%;
-  padding-left: 30px;
-  /* Asegura un pequeño espacio a la izquierda de la imagen */
-}
-
-.titulo-silpa {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
-  text-align: center;
-}
-
-.subtitulo-silpa {
-  font-size: 1.2em;
-  color: #666;
-  margin-bottom: 20px;
-  text-align: justify;
-}
-
-.ventajas-silpa {
-  margin-top: 20px;
-}
-
-.ventaja-silpa {
-  margin-bottom: 20px;
-}
-
-.ventaja-titulo-silpa {
-  color: #007bff;
-  font-size: 1.2em;
-}
-
-.ventaja-texto-silpa {
-  color: #555;
-  font-size: 1em;
-  text-align: justify;
-}
-
-.imagen-servicio-silpa {
-  width: 85%;
+.imagen img {
+  width: 100%;
+  max-width: 450px;
   height: auto;
-  max-width: 500px;
-  /* Limitar el tamaño máximo de la imagen */
-  border-radius: 38px;
-  display: block;
-  margin-left: auto;
-  /* Centra la imagen dentro de la columna */
-  margin-right: auto;
-  /* Centra la imagen dentro de la columna */
+  border-radius: 35px;
+  box-shadow: 0px 0px 15px rgb(255 255 255 / 70%);
+  object-fit: cover;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.imagen img.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.imagen img:hover {
+  transform: scale(1.05);
+}
+
+/* BENEFICIOS */
+.beneficios {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.beneficio {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #272727;
+  padding: 12px;
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* CUANDO LOS BENEFICIOS SON VISIBLES */
+.beneficio.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.beneficio:hover {
+  background: #3D3D3D;
+  transform: scale(1.02);
+}
+
+.beneficio i {
+  font-size: 1.8rem;
+  color: #d6fd11;
+}
+
+.beneficio strong {
+  color: #94a3b4;
+  font-weight: bold;
+}
+
+.beneficio span {
+  text-align: justify;
+  color: white;
+}
+
+/* CUANDO LOS ELEMENTOS SON VISIBLES, SE ANIMAN */
+#contenidoElegir .beneficio.show,
+#contenidoElegir .imagen img.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 1024px) {
+  .contenido {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .texto,
+  .imagen {
+    max-width: 100%;
+  }
+
+  .beneficios {
+    align-items: center;
+  }
+
+  .beneficio {
+    max-width: 80%;
+  }
 }
 
 /* Estilos responsivos */
@@ -506,7 +597,7 @@
   .silpa-value-card h4 {
     font-size: 1.5em;
   }
-  
+
   .silpa-value-card p {
     font-size: 1.4em;
     color: #252323;
@@ -517,52 +608,52 @@
     padding: 40px 0;
     background-color: #f4f4f4;
   }
-  
+
   .container-silpa {
     width: 80%;
     margin: 0 auto;
   }
-  
+
   .row-silpa {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     /* Alineación superior para evitar que se mueva la imagen */
   }
-  
+
   .titulo-silpa {
     font-size: 2.4em;
     margin-bottom: 10px;
     color: #333;
     text-align: center;
   }
-  
+
   .subtitulo-silpa {
     font-size: 1.5em;
     color: #666;
     margin-bottom: 8px;
     text-align: justify;
   }
-  
+
   .ventajas-silpa {
     margin-top: 10px;
   }
-  
+
   .ventaja-silpa {
     margin-bottom: 10px;
   }
-  
+
   .ventaja-titulo-silpa {
     color: #007bff;
     font-size: 1.5em;
   }
-  
+
   .ventaja-texto-silpa {
     color: #555;
     font-size: 1.3em;
     text-align: justify;
   }
-  
+
   .imagen-servicio-silpa {
     width: 85%;
     height: auto;

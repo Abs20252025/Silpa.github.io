@@ -93,6 +93,7 @@ html {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
+  padding: 20px;
   opacity: 0;
   visibility: hidden;
   /* Asegura que no se vea en absoluto */
@@ -726,6 +727,16 @@ section {
   }
 }
 
+@media (min-width: 850px){
+  .inicio-silpa.animated .slide-content h1{
+    font-size: 1.5rem;
+  }
+
+  .inicio-silpa.animated .slide-content p{
+    font-size: 1rem;
+  }
+}
+
 @media (min-width: 1920px) {
   .slide {
     background-size: cover;
@@ -826,6 +837,8 @@ section {
     height: 240px;
     width: 170px;
   }
+
+  
 }
 
 @media (max-width: 480px) {

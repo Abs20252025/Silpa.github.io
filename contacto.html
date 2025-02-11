@@ -18,8 +18,8 @@
       content="Ponte en contacto con SILPA S.A.C. y descubre cómo podemos ayudarte con soluciones integrales en limpieza, protección ambiental y saneamiento.">
 
     <!-- Ruta corregida para la imagen -->
-    <meta property="og:image" content="https://abs20252025.github.io/Silpa.github.io/img/silpaJpg.jpg?v=2">
-
+    <meta property="og:image"
+      content="https://abs20252025.github.io/Silpa.github.io/img/silpa.png">
 
     <!-- URL corregida -->
     <meta property="og:url"
@@ -32,11 +32,11 @@
 
     <!-- Asegurarse de que las rutas sean correctas -->
     <link rel="stylesheet"
-      href="https://abs20252025.github.io/Silpa.github.io/css/contacto.css">
+      href="css/contacto.css">
     <link rel="stylesheet"
-      href="https://abs20252025.github.io/Silpa.github.io/css/header.css">
+      href="css/header.css">
     <link rel="stylesheet"
-      href="https://abs20252025.github.io/Silpa.github.io/css/footer.css">
+      href="css/footer.css">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -86,15 +86,18 @@
 
         <!-- Lado izquierdo: Formulario en una Card -->
         <div class="formulario-card">
-          <form action="apiMail.php" method="POST" class="formulario-contacto">
-            <h3>Déjanos tu mensaje</h3>
+          <form id="formularioContacto" class="formulario-contacto">
+            <h3>En breve minutos un Ejecutivo te llamará</h3>
+            <input type="text" id="ruc" name="ruc" required placeholder="RUC">
+            <input type="text" id="razonSocial" name="razonSocial" required
+              placeholder="Razón Social">
             <input type="text" id="nombre" name="nombre" required
               placeholder="Nombre y Apellido">
             <input type="email" id="email" name="email" required
               placeholder="Correo Electrónico">
             <input type="tel" id="telefono" name="telefono" required
               placeholder="Teléfono">
-            <textarea id="mensaje" name="mensaje" rows="5" required
+            <textarea id="mensaje" name="mensaje" rows="1" required
               placeholder="Mensaje"></textarea>
             <button type="submit">Enviar</button>
           </form>
@@ -106,14 +109,13 @@
             <h4>📞 Teléfonos</h4>
             <label>Central</label>
 
-            
             <p>+51 ###########</p>
             <label>Whatsapp / Móvil:</label>
             <p>+51 ###########</p>
           </div>
           <div class="card-contacto">
             <h4>📧 Correo</h4>
-            <p>contacto@silpa.com</p>
+            <p>comercial@silpa.com</p>
           </div>
           <div class="card-contacto">
             <h4>📍 Ubicación</h4>
@@ -140,6 +142,12 @@
           <h4>INFORMACIÓN</h4>
           <ul class="iconInfo">
             <li>
+              <a href="https://wa.me/51987654321" target="_blank">
+                <img src="svg/whatsapp.svg" alt="WhatsApp" width="40"
+                  height="40">&nbsp;+51 987 654 321
+              </a>
+            </li>
+            <li>
               <a href="tel:+51987654321">
                 <img src="svg/phone-call-svgrepo-com.svg" alt="Teléfono"
                   width="40" height="40">&nbsp;+51 987 654 321
@@ -148,13 +156,13 @@
             <li>
               <a href="mailto:contacto@silpa.com">
                 <img src="svg/envelope-at.svg" alt="Correo" width="40"
-                  height="40">&nbsp;contacto@silpa.com
+                  height="40">&nbsp;comercial@silpa.com
               </a>
             </li>
             <li>
-              <a href="https://wa.me/51987654321" target="_blank">
-                <img src="svg/whatsapp.svg" alt="WhatsApp" width="40"
-                  height="40">&nbsp;+51 987 654 321
+              <a href="contacto.html" target="_blank">
+                <img src="svg/form.svg" alt="Formulario" width="40"
+                  height="40">Cotizar
               </a>
             </li>
           </ul>
@@ -164,6 +172,7 @@
             <li><a href="#"><img src="svg/instagram.svg"
                   alt="Instagram"></a></li>
             <li><a href="#"><img src="svg/linkedin.svg" alt="LinkedIn"></a></li>
+            <li><a href="#"><img src="svg/tiktok.svg" alt="TikTok "></a></li>
           </ul>
         </div>
         <!-- COLUMNA SERVICIOS -->
@@ -177,7 +186,8 @@
             <li><a href="#"><i
                   class="fas fa-bug"></i>&nbsp;&nbsp;&nbsp;Desinsectación</a></li>
             <li><a href="#"><img src="svg/raton.svg" alt="Desratización"
-                  width="20" height="20" class="RataIcon"> &nbsp;Desratización</a></li>
+                  width="20" height="20" class="RataIcon">
+                &nbsp;Desratización</a></li>
             <li><a href="#"><i
                   class="fas fa-broom"></i>&nbsp;&nbsp;&nbsp;Limpieza
                 Integral</a></li>
@@ -217,11 +227,13 @@
       <div class="footer-bottom">
         <p>&copy; 2025 SILPA SOLUCIONES INTEGRALES. Todos los derechos
           reservados.</p>
-        <p>Fue creado por <a href="https://www.linkedin.com/in/axl-velez"
-            target="_blank" rel="noopener noreferrer"><strong>Axl
+        <p>Página Web diseñada y realizada por: <a
+            href="https://www.linkedin.com/in/axl-velez"
+            target="_blank" rel="noopener noreferrer" class="Axl"><strong>Axl
               Velez</strong></a></p>
       </div>
     </footer>
     <script src="js/header.js"></script>
+    <script src="js/whatsappForm.js"></script>
   </body>
 </html>
