@@ -39,7 +39,7 @@ html {
 .inicio-silpa {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   background: black;
 }
@@ -117,6 +117,7 @@ html {
 
 /* Animaciones individuales después de que el contenido sea visible */
 .inicio-silpa.animated .slide-content h1 {
+  color: #9bc020;
   opacity: 0;
   font-size: 3rem;
   margin-bottom: 10px;
@@ -127,10 +128,13 @@ html {
 }
 
 .inicio-silpa.animated .slide-content p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra negra */
   opacity: 0;
   font-size: 1.5rem;
+  font-weight: bold;
   margin-bottom: 20px;
-  animation: slideInLeft 1s ease-out 2s forwards;
+  -webkit-text-stroke: 0.15px black;
+  animation: slideInLeft 1s ease-out 1.5s forwards;
 }
 
 .inicio-silpa.animated .slide-content .btn-primary,
@@ -726,13 +730,25 @@ section {
   }
 }
 
-@media (max-width: 850px){
+@media (max-width: 896px){
   .inicio-silpa.animated .slide-content h1{
     font-size: 1.5rem;
   }
 
   .inicio-silpa.animated .slide-content p{
     font-size: 1rem;
+  }
+}
+
+@media screen and (max-aspect-ratio: 16/9) {
+  .inicio-silpa {
+    height: auto; /* Permite que crezca si es necesario */
+    min-height: 100vh;
+  }
+
+  .slide {
+    height: auto;
+    min-height: 100vh;
   }
 }
 
