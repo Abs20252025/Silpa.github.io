@@ -457,7 +457,8 @@ section {
 .SILPA-servicio-back p {
   text-align: justify;
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
 }
 
 .SILPA-servicio-links {
@@ -758,17 +759,17 @@ section {
   }
 
   .slide-content {
-  position: absolute;
-  top: auto;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  opacity: 0;
-  visibility: hidden;
-  /* Asegura que no se vea en absoluto */
-}
-  
+    position: absolute;
+    top: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    /* Asegura que no se vea en absoluto */
+  }
+
 }
 
 @media screen and (max-aspect-ratio: 16/9) {
@@ -859,7 +860,7 @@ section {
   }
 
   .SILPA-servicio-back p {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     text-align: justify;
     color: #555;
     margin-bottom: 0;
@@ -997,7 +998,7 @@ section {
   }
 
   .SILPA-servicio-card .SILPA-servicio-back p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     /* Ajusta según el tamaño de pantalla */
   }
 

@@ -320,6 +320,7 @@ html {
   .slide-content {
     width: 90%; /* Ajusta el ancho para que no quede muy pegado */
     text-align: center; /* Centra el contenido */
+    top: auto;
   }
 
   .slide-content h1 {
@@ -342,7 +343,7 @@ html {
   }
 
   .inicio-silpa.animated .slide-content .btn-primary, .inicio-silpa.animated .slide-content .btn-secondary{
-    padding: 10px;
+    padding: 5px;
   }
 }
 

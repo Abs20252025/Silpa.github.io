@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Intervalo para cambiar el slide automáticamente cada 4900 ms
-    setInterval(nextSlide, 4900);
+    setInterval(nextSlide, 5500);
 
     // Asegurar que el primer slide tenga la animación activada al inicio
     setTimeout(() => {
