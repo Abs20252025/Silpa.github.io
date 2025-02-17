@@ -9,6 +9,7 @@
     justify-content: center;
     padding: 20px;
     background-color: #162632;
+    min-height: 535px;
 }
 
 .contenedorServicio {
