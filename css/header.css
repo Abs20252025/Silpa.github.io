@@ -34,6 +34,25 @@ html {
   /* Prevenir el scroll horizontal */
 }
 
+/* ICONO WSP CUBRE TODO EL BODY*/
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  /* Ajusta la distancia desde la parte inferior */
+  right: 20px;
+  /* Ajusta la distancia desde la parte derecha */
+  width: 60px;
+  /* Ajusta el tamaño del ícono */
+  height: 60px;
+  /* Ajusta el tamaño del ícono */
+  z-index: 1000;
+  /* Asegura que esté por encima de otros elementos */
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.5);
+}
+
 /* HEADER */
 .silpa-header {
   background-color: white;

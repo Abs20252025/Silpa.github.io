@@ -35,6 +35,8 @@ html {
 }
 
 
+
+
 /* INICIO SILPA */
 .inicio-silpa {
   position: relative;
@@ -68,7 +70,7 @@ html {
 
 /* Cambiar la imagen de fondo de cada slide */
 .slide:nth-child(1) {
-  background-image: url('../img/Silpa-Inicio.jpg');
+  background-image: url('../img/Silpa-Inicio1.jpg');
 }
 
 .slide:nth-child(2) {
@@ -122,7 +124,7 @@ html {
 
 /* Animaciones individuales después de que el contenido sea visible */
 .inicio-silpa.animated .slide-content h1 {
-  color: #9bc020;
+  color: rgb(181 211 35);
   opacity: 0;
   font-size: 3rem;
   margin-bottom: 10px;
@@ -133,13 +135,13 @@ html {
 }
 
 .inicio-silpa.animated .slide-content p {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
   /* Sombra negra */
   opacity: 0;
   font-size: 1.5rem;
+  color: ghostwhite;
   font-weight: bold;
   margin-bottom: 20px;
-  -webkit-text-stroke: 0.15px black;
   animation: slideInLeft 1s ease-out 1.5s forwards;
 }
 
@@ -210,8 +212,6 @@ html {
     transform: translateY(0);
   }
 }
-
-
 
 /* SERVICIOS SILPA */
 

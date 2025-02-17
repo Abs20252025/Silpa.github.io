@@ -26,7 +26,7 @@
   background-color: var(--color-dark);
 }
 
-.silpa-row h2 {
+.silpa-row h1 {
   font-size: 2em;
   text-transform: uppercase;
   text-shadow: 4px 1px 4px rgb(0, 0, 0);
