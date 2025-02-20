@@ -53,15 +53,15 @@ html {
   display: flex;
 }
 
-.slider .slide{
+.slider .slide {
   height: 100%;
 }
+
 .slide {
   min-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
   background-position: center;
   position: relative;
   opacity: 0;
@@ -72,14 +72,20 @@ html {
 /* Cambiar la imagen de fondo de cada slide */
 .slide:nth-child(1) {
   background-image: url('../img/Silpa-Inicio1.jpg');
+  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .slide:nth-child(2) {
   background-image: url('../img/banner1.png');
+  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .slide:nth-child(3) {
   background-image: url('../img/Fumigacion.webp');
+  background-size: cover;
+  background-size: 100% 100%;
 }
 
 /* Animación para que la imagen aparezca suavemente */
@@ -125,7 +131,7 @@ html {
 
 /* Animaciones individuales después de que el contenido sea visible */
 .inicio-silpa.animated .slide-content h1 {
-  color: rgb(181 211 35);
+  color: white;
   opacity: 0;
   font-size: 3rem;
   margin-bottom: 10px;
@@ -311,6 +317,12 @@ section {
   height: auto;
 }
 
+
+.SILPA-servicios-fila:nth-of-type(3) .SILPA-servicios-categoria:nth-child(2) {
+  flex: 2;
+  /* Lado derecho más ancho */
+}
+
 .SILPA-servicios-section {
   background-color: var(--color-dark);
 }
@@ -321,6 +333,7 @@ section {
   text-align: center;
   margin-bottom: 30px;
 }
+
 
 .SILPA-categoria-servicio {
   background-color: #ffffff;
@@ -359,6 +372,15 @@ section {
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 1px 1px 4px rgb(0, 0, 0);
+}
+
+.SILPA-servicios-titulo h1 {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  background-color: #377b52;
 }
 
 .SILPA-servicios-titulo .SILPA-destacado {
@@ -430,7 +452,7 @@ section {
   width: 100%;
   background-color: white;
   position: absolute;
-  font-size: 1rem;
+  font-size: 0.96rem;
   margin-top: 10px;
   color: #007500;
   font-weight: bold;
@@ -893,6 +915,14 @@ section {
   .silpa-trabajo-description {
     text-align: justify;
   }
+
+  .silpa-container {
+    max-width: max-content;
+    margin: 0 auto;
+    padding: 0; 
+    text-align: center;
+  }
+
 }
 
 @media (min-width: 1400px) {

@@ -54,18 +54,27 @@
 }
 
 /* Columna izquierda con la imagen */
+
+.silpa-column silpa-left{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .silpa-left {
   text-align: center;
 }
 
 .silpa-left p {
+  margin: 0 auto;
   text-align: justify;
+  width: 75%;
 }
 
 .silpa-image {
   width: 100%;
   max-width: 300px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   height: auto;
   border-radius: 25px;
 }
@@ -132,7 +141,7 @@
 }
 
 .silpa-mission-vision p {
-  font-size: 16px;
+  font-size: 1rem;
   text-align: justify;
 }
 

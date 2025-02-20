@@ -34,30 +34,40 @@ html {
   /* Prevenir el scroll horizontal */
 }
 
-/* ICONO WSP CUBRE TODO EL BODY*/
+/* ICONO WSP FIJO EN LA ESQUINA */
 .whatsapp-icon {
   position: fixed;
   bottom: 20px;
-  /* Ajusta la distancia desde la parte inferior */
   right: 20px;
-  /* Ajusta la distancia desde la parte derecha */
   width: 60px;
-  /* Ajusta el tamaño del ícono */
   height: 60px;
-  /* Ajusta el tamaño del ícono */
   z-index: 1000;
-  /* Asegura que esté por encima de otros elementos */
+  transition: transform 0.3s ease-in-out;
+  animation: rotar-vibracion 3s infinite ease-in-out;
+  animation-delay: 3.5s; /* Espera 5 segundos antes de empezar */
 }
 
+/* Aumenta el tamaño al pasar el mouse */
 .whatsapp-icon:hover {
   transform: scale(1.5);
+  animation: none; /* Detiene la animación de vibración al hacer hover */
 }
+
+/* Animación de vibración con rotación */
+@keyframes rotar-vibracion {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  10% { transform: rotate(-10deg) translateY(-2px); }
+  20% { transform: rotate(10deg) translateY(2px); }
+  30% { transform: rotate(-10deg) translateY(-2px); }
+  40% { transform: rotate(10deg) translateY(2px); }
+}
+
 
 /* HEADER */
 .silpa-header {
   background-color: white;
   color: #fff;
-  padding: 10px 0;
+  padding: 5px 0px;
 }
 
 
@@ -76,7 +86,7 @@ html {
 .silpa-header__logo img {
   background-color: #ffffff;
   width: 245px;
-  height: 80px;
+  height: 95px;
 }
 
 /* NAVEGACIÓN */
@@ -92,7 +102,7 @@ html {
 }
 
 .silpa-header__menu-item a {
-  font-size: 1.1em;
+  font-size: 1.3em;
   color: var(--color-dark);
   text-decoration: none;
   font-weight: bold;

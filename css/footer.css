@@ -31,6 +31,8 @@ footer {
   margin-left: 10px;
 }
 
+
+
 .footer-column h4 {
   margin-bottom: 10px;
   font-size: 18px;
@@ -93,6 +95,25 @@ footer {
   transform: scale(1.1);
   /* Aumenta ligeramente el tamaño del ícono */
 }
+
+.location {
+  display: flex;
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.logoredes {
+  width: 40px;
+  height: 40px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(242deg) brightness(114%) contrast(101%);
+}
+
+.logoredes:hover{
+  transform: scale(1.2);
+  filter: invert(94%) sepia(46%) saturate(4167%) hue-rotate(13deg) brightness(104%) contrast(102%);
+  /* Aumenta ligeramente el tamaño del ícono */
+}
+
 
 .map-container iframe {
   border: none;

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let mensaje = document.getElementById("mensaje").value;
 
         // Número de WhatsApp (reemplázalo con el tuyo)
-        let whatsappNumber = "51932055959";
+        let whatsappNumber = "51936351298";
 
         // Agregar emojis usando Unicode
         let textoMensaje = encodeURIComponent(
