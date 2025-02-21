@@ -1,5 +1,5 @@
   #contacto {
-    padding: 10px 40px;
+    padding: 5px 20px;
     background-color: #f4f4f4;
   }
 
@@ -25,15 +25,13 @@
     max-width: 900px;
     /* Ancho máximo */
     margin: 0 auto;
-    /* Centrar */
-    padding: 10px;
   }
 
   /* Card del formulario */
   .formulario-card {
     flex: 1;
     background: #fff;
-    padding: 20px;
+    padding: 15px;
     border-radius: 25px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     min-width: 320px;
@@ -77,7 +75,7 @@
 
   .card-contacto {
     background: #fff;
-    padding: 15px;
+    padding: 12px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;

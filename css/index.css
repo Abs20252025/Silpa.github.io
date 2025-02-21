@@ -645,8 +645,8 @@ section {
 /* Imagen: empieza oculta y se desliza desde la izquierda */
 .imagen-banner {
   flex: 1;
-  background-image: url('../img/banner2.png');
-  background-size: cover;
+  background-image: url('../img/bannerSilpaSac.png');
+  background-size: 100% 100%;
   background-position: center;
   height: auto;
   width: 100%;
@@ -919,8 +919,23 @@ section {
   .silpa-container {
     max-width: max-content;
     margin: 0 auto;
-    padding: 0; 
+    padding: 0;
     text-align: center;
+  }
+
+  .slide:nth-child(1) {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .slide:nth-child(2) {
+    background-image: url('../img/banner1Movil.png');
+    background-size: cover;
+  }
+
+  .slide:nth-child(3) {
+    background-image: url('../img/banner2Movil.png');
+    background-size: cover;
   }
 
 }

@@ -43,24 +43,33 @@ html {
   height: 60px;
   z-index: 1000;
   transition: transform 0.3s ease-in-out;
-  animation: rotar-vibracion 3s infinite ease-in-out;
-  animation-delay: 3.5s; /* Espera 5 segundos antes de empezar */
+  animation: rotar-vibracion 4.5s infinite ease-in-out; /* 1.5s animación + 3s pausa */
+  animation-delay: 3s; /* Espera 3 segundos antes de iniciar la primera vez */
 }
 
 /* Aumenta el tamaño al pasar el mouse */
 .whatsapp-icon:hover {
   transform: scale(1.5);
-  animation: none; /* Detiene la animación de vibración al hacer hover */
+  animation: none; /* Detiene la animación al hacer hover */
 }
 
-/* Animación de vibración con rotación */
+/* Animación más rápida con pausa incluida */
 @keyframes rotar-vibracion {
-  0%, 100% { transform: rotate(0deg) translateY(0); }
-  10% { transform: rotate(-10deg) translateY(-2px); }
-  20% { transform: rotate(10deg) translateY(2px); }
-  30% { transform: rotate(-10deg) translateY(-2px); }
-  40% { transform: rotate(10deg) translateY(2px); }
+  0%, 100% { transform: rotate(0deg) translateY(0) scale(1); }
+  10% { transform: rotate(-20deg) translateY(-6px) scale(1.1); }
+  20% { transform: rotate(20deg) translateY(6px) scale(1.1); }
+  30% { transform: rotate(-20deg) translateY(-6px) scale(1.1); }
+  40% { transform: rotate(20deg) translateY(6px) scale(1.1); }
+  50% { transform: scale(1.15); } /* Efecto de latido */
+  60% { transform: rotate(-10deg) translateY(-3px) scale(1.1); }
+  70% { transform: rotate(10deg) translateY(3px) scale(1.1); }
+  80% { transform: rotate(-10deg) translateY(-3px) scale(1.1); }
+  90% { transform: rotate(10deg) translateY(3px) scale(1.1); }
+  
+  95%, 100% { transform: none; } /* Pausa de 3 segundos */
 }
+
+
 
 
 /* HEADER */
