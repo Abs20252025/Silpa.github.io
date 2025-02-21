@@ -37,7 +37,7 @@ html {
 /* ICONO WSP FIJO EN LA ESQUINA */
 .whatsapp-icon {
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   right: 20px;
   width: 60px;
   height: 60px;
@@ -86,7 +86,7 @@ html {
 .silpa-header__logo img {
   background-color: #ffffff;
   width: 245px;
-  height: 95px;
+  height: 100px;
 }
 
 /* NAVEGACIÓN */
