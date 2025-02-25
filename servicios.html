@@ -31,6 +31,15 @@
     <link rel="icon" type="image/svg+xml"
       href="https://abs20252025.github.io/Silpa.github.io/img/SILPA-logo.svg">
 
+    <!-- Meta Tag de Geolocalización (Útil si deseas destacar en Perú) -->
+    <meta name="geo.region" content="PE">
+    <meta name="geo.placename" content="Perú">
+    <meta name="geo.position" content="-9.1900;-75.0152">
+    <meta name="ICBM" content="-9.1900, -75.0152">
+
+    <!-- Meta Tag de Idioma -->
+    <meta http-equiv="content-language" content="es">
+
     <!-- Hojas de estilo con rutas absolutas -->
     <link rel="stylesheet"
       href="css/index.css">
@@ -42,6 +51,73 @@
       rel="stylesheet">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "SILPA S.A.C.",
+          "url": "https://abs20252025.github.io/Silpa.github.io/",
+          "logo": "https://abs20252025.github.io/Silpa.github.io/img/SILPA-logo.svg",
+          "description": "SILPA S.A.C. ofrece soluciones integrales en saneamiento ambiental, fumigación, desinfección, desinsectación, desratización, limpieza integral, monitoreo ambiental y ocupacional en todo el Perú.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "PE",
+            "addressLocality": "Perú"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+51 999 999 999",
+            "contactType": "customer service",
+            "areaServed": "PE",
+            "availableLanguage": "es"
+          },
+          "makesOffer": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Fumigación y Control de Plagas",
+                "description": "Servicios de fumigación profesional para eliminar y prevenir plagas en hogares y empresas.",
+                "serviceType": "Fumigación"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Desinfección y Saneamiento",
+                "description": "Soluciones de desinfección para ambientes seguros y libres de patógenos.",
+                "serviceType": "Desinfección"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Limpieza Integral",
+                "description": "Servicios especializados en limpieza industrial, comercial y hospitalaria.",
+                "serviceType": "Limpieza"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Monitoreo Ambiental y Ocupacional",
+                "description": "Evaluamos riesgos ambientales y ocupacionales para garantizar la seguridad laboral.",
+                "serviceType": "Monitoreo Ambiental"
+              }
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/SilpaPeru",
+            "https://www.instagram.com/SilpaPeru",
+            "https://www.linkedin.com/company/SilpaPeru"
+          ]
+        }
+        </script>
+        
+
   </head>
   <body>
     <script src="js/header.js"></script>
@@ -64,6 +140,8 @@
             <li class="silpa-header__menu-item"><a
                 href="servicios.html">Servicios</a></li>
             <li class="silpa-header__menu-item"><a
+                href="#">Blog</a></li>
+            <li class="silpa-header__menu-item"><a
                 href="contacto.html">Contacto</a></li>
           </ul>
         </nav>
@@ -79,228 +157,229 @@
       <div class="silpa-header__overlay"></div>
     </header>
     <section class="SILPA-servicios-section" id="servicios">
-        <div class="SILPA-servicios-titulo">
-            <h1>NUESTROS SERVICIOS</h1>
-          </div>
-        <!-- Fila 1: Saneamiento Ambiental -->
-        <div class="SILPA-servicios-fila">
-          <div class="SILPA-servicios-categoria">
-            <h3 class="SILPA-categoria-titulo">Saneamiento Ambiental</h3>
-            <div class="SILPA-servicios-grid">
-              <!-- Fumigación -->
-              <div class="SILPA-servicio-card">
-                <div class="SILPA-servicio-front">
-                  <img src="img/Fumigacion.webp" alt="Fumigación">
-                  <h3>SERVICIO DE FUMIGACIÓN</h3>
-                </div>
-                <div class="SILPA-servicio-back">
-                  <p>Servicio de fumigación para el control de plagas en hogares,
-                    empresas e industrias con tratamientos seguros y
-                    efectivos.</p>
-                  <div class="SILPA-servicio-links">
-                    <a href="fumigacion.html"
-                      class="SILPA-ver-mas">Ver&nbsp; <i
-                        class="fas fa-plus"></i></a>
-                    <a
-                      href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%Fumigación%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
-                      target="_blank" class="CotizarServicio">
-                      COTIZAR
-                    </a>
-                  </div>
+      <div class="SILPA-servicios-titulo">
+        <h1>NUESTROS SERVICIOS</h1>
+      </div>
+      <!-- Fila 1: Saneamiento Ambiental -->
+      <div class="SILPA-servicios-fila">
+        <div class="SILPA-servicios-categoria">
+          <h3 class="SILPA-categoria-titulo">Saneamiento Ambiental</h3>
+          <div class="SILPA-servicios-grid">
+            <!-- Fumigación -->
+            <div class="SILPA-servicio-card">
+              <div class="SILPA-servicio-front">
+                <img src="img/Fumigacion.webp" alt="Fumigación">
+                <h3>SERVICIO DE FUMIGACIÓN</h3>
+              </div>
+              <div class="SILPA-servicio-back">
+                <p>Servicio de fumigación para el control de plagas en
+                  edificios,
+                  empresas e industrias con tratamientos seguros y
+                  efectivos.</p>
+                <div class="SILPA-servicio-links">
+                  <a href="fumigacion.html"
+                    class="SILPA-ver-mas">Ver&nbsp; <i
+                      class="fas fa-plus"></i></a>
+                  <a
+                    href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%Fumigación%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
+                    target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
-  
-              <!-- Desinfección -->
-              <div class="SILPA-servicio-card">
-                <div class="SILPA-servicio-front">
-                  <img src="img/desinfeccion.webp" alt="Desinfección">
-                  <h3>SERVICIO DE DESINFECCIÓN</h3>
-                </div>
-                <div class="SILPA-servicio-back">
-                  <p>Servicio de desinfección para eliminar virus y bacterias en
-                    espacios residenciales y comerciales con productos
-                    certificados.</p>
-                  <div class="SILPA-servicio-links">
-                    <a href="desinfeccion.html" class="SILPA-ver-mas">Ver&nbsp; <i
-                        class="fas fa-plus"></i></a>
-                    <a
-                      href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Desinfección%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
-                      target="_blank" class="CotizarServicio">
-                      COTIZAR
-                    </a>
-                  </div>
+            </div>
+
+            <!-- Desinfección -->
+            <div class="SILPA-servicio-card">
+              <div class="SILPA-servicio-front">
+                <img src="img/desinfeccion.webp" alt="Desinfección">
+                <h3>SERVICIO DE DESINFECCIÓN</h3>
+              </div>
+              <div class="SILPA-servicio-back">
+                <p>Servicio de desinfección para eliminar virus y bacterias en
+                  espacios residenciales y comerciales con productos
+                  certificados.</p>
+                <div class="SILPA-servicio-links">
+                  <a href="desinfeccion.html" class="SILPA-ver-mas">Ver&nbsp; <i
+                      class="fas fa-plus"></i></a>
+                  <a
+                    href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Desinfección%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
+                    target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
-  
-              <!-- Desinsectacion -->
-              <div class="SILPA-servicio-card">
-                <div class="SILPA-servicio-front">
-                  <img src="img/desinsectacion.webp" alt="Desinsectación">
-                  <h3>SERVICIO DE DESINSECTACIÓN</h3>
-                </div>
-                <div class="SILPA-servicio-back">
-                  <p>Servicio de desinsectación para el control de cucarachas,
-                    mosquitos, hormigas y otros insectos con métodos
-                    especializados.</p>
-                  <div class="SILPA-servicio-links">
-                    <a href="desinsectacion.html" class="SILPA-ver-mas">Ver&nbsp;
-                      <i
-                        class="fas fa-plus"></i></a>
-                    <a
-                      href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Desinsectación%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
-                      target="_blank" class="CotizarServicio">
-                      COTIZAR
-                    </a>
-                  </div>
+            </div>
+
+            <!-- Desinsectacion -->
+            <div class="SILPA-servicio-card">
+              <div class="SILPA-servicio-front">
+                <img src="img/desinsectacion.webp" alt="Desinsectación">
+                <h3>SERVICIO DE DESINSECTACIÓN</h3>
+              </div>
+              <div class="SILPA-servicio-back">
+                <p>Servicio de desinsectación para el control de cucarachas,
+                  mosquitos, hormigas y otros insectos con métodos
+                  especializados.</p>
+                <div class="SILPA-servicio-links">
+                  <a href="desinsectacion.html" class="SILPA-ver-mas">Ver&nbsp;
+                    <i
+                      class="fas fa-plus"></i></a>
+                  <a
+                    href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Desinsectación%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
+                    target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
-  
-              <!-- Desratizacion -->
-              <div class="SILPA-servicio-card">
-                <div class="SILPA-servicio-front">
-                  <img src="img/desratizacion.webp" alt="Desratización">
-                  <h3>SERVICIO DE DESRATIZACIÓN</h3>
-                </div>
-                <div class="SILPA-servicio-back">
-                  <p>Servicio de desratización para eliminar ratas y ratones de
-                    forma segura en hogares y empresas.</p>
-                  <div class="SILPA-servicio-links">
-                    <a href="desratizacion.html" class="SILPA-ver-mas">Ver&nbsp;
-                      <i
-                        class="fas fa-plus"></i></a>
-                    <a
-                      href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Desratización%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
-                      target="_blank" class="CotizarServicio">
-                      COTIZAR
-                    </a>
-                  </div>
+            </div>
+
+            <!-- Desratizacion -->
+            <div class="SILPA-servicio-card">
+              <div class="SILPA-servicio-front">
+                <img src="img/desratizacion.webp" alt="Desratización">
+                <h3>SERVICIO DE DESRATIZACIÓN</h3>
+              </div>
+              <div class="SILPA-servicio-back">
+                <p>Servicio de desratización para eliminar ratas y ratones de
+                  forma segura en edificios, empresas e industrias.</p>
+                <div class="SILPA-servicio-links">
+                  <a href="desratizacion.html" class="SILPA-ver-mas">Ver&nbsp;
+                    <i
+                      class="fas fa-plus"></i></a>
+                  <a
+                    href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Desratización%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
+                    target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Fila 2: Limpieza y Mantenimiento Integral + Monitoreos -->
-        <div class="SILPA-servicios-fila">
-          <!-- Limpieza y Mantenimiento Integral -->
-          <div class="SILPA-servicios-categoria">
-            <h3 class="SILPA-categoria-titulo">Limpieza Integral</h3>
-            <div class="SILPA-servicios-grid">
-              <div class="SILPA-servicio-card">
-                <div class="SILPA-servicio-front">
-                  <img src="img/limpieza-integral.webp" alt="Limpieza Integral">
-                  <h3>SERVICIO DE LIMPIEZA INTEGRAL</h3>
-                </div>
-                <div class="SILPA-servicio-back">
-                  <p>Servicio de limpieza integral para oficinas, comercios e
-                    industrias con estándares de calidad.</p>
-                  <div class="SILPA-servicio-links">
-                    <a href="limpieza-integral.html"
-                      class="SILPA-ver-mas">Ver&nbsp; <i
-                        class="fas fa-plus"></i></a>
-                    <a
-                      href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Limpieza%20Integral%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
-                      target="_blank" class="CotizarServicio">
-                      COTIZAR
-                    </a>
-                  </div>
-                </div>
+      </div>
+      <!-- Fila 2: Limpieza y Mantenimiento Integral + Monitoreos -->
+      <div class="SILPA-servicios-fila">
+        <!-- Limpieza y Mantenimiento Integral -->
+        <div class="SILPA-servicios-categoria">
+          <h3 class="SILPA-categoria-titulo">Limpieza Integral</h3>
+          <div class="SILPA-servicios-grid">
+            <div class="SILPA-servicio-card">
+              <div class="SILPA-servicio-front">
+                <img src="img/limpieza-integral.webp" alt="Limpieza Integral">
+                <h3>SERVICIO DE LIMPIEZA INTEGRAL</h3>
               </div>
-            </div>
-          </div>
-  
-          <!-- Monitoreos y Asesorías Ambientales -->
-          <div class="SILPA-servicios-categoria">
-            <h3 class="SILPA-categoria-titulo">Gestión Ambiental</h3>
-            <div class="SILPA-servicios-grid">
-              <div class="SILPA-servicio-card">
-                <div class="SILPA-servicio-front">
-                  <img src="img/Gestion-Residuos-Solidos.webp"
-                    alt="Gestión de Residuos Sólidos">
-                  <h3>SERVICIO DE GESTIÓN DE RESIDUOS SÓLIDOS</h3>
-                </div>
-                <div class="SILPA-servicio-back">
-                  <p>Servicio de gestión de residuos sólidos para la recolección,
-                    transporte y disposición final segura, cumpliendo normativas
-                    ambientales.</p>
-                  <div class="SILPA-servicio-links">
-                    <a href="gestion-de-residuos-solidos.html"
-                      class="SILPA-ver-mas">Ver&nbsp; <i
-                        class="fas fa-plus"></i></a>
-                    <a
-                      href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Gestión%20de%20Residuos%20Sólidos%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
-                      target="_blank" class="CotizarServicio">
-                      COTIZAR
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="SILPA-servicio-card">
-                <div class="SILPA-servicio-front">
-                  <img src="img/Monitoreo-Ambiental.webp"
-                    alt="Monitoreo Ambiental">
-                  <h3>SERVICIO DE MONITOREO AMBIENTAL</h3>
-                </div>
-                <div class="SILPA-servicio-back">
-                  <p>Servicio de monitoreo ambiental para evaluar la calidad del
-                    aire y agua según normativas vigentes.</p>
-                  <div class="SILPA-servicio-links">
-                    <a href="monitoreo-ambiental.html"
-                      class="SILPA-ver-mas">Ver&nbsp; <i
-                        class="fas fa-plus"></i></a>
-                    <a
-                      href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Monitoreo%20Ambiental%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
-                      target="_blank" class="CotizarServicio">
-                      COTIZAR
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="SILPA-servicio-card">
-                <div class="SILPA-servicio-front">
-                  <img src="img/Monitoreo-Ocupacional.webp"
-                    alt="Monitoreo Ocupacional">
-                  <h3>SERVICIO DE MONITOREO OCUPACIONAL</h3>
-                </div>
-                <div class="SILPA-servicio-back">
-                  <p>Servicio de monitoreo ocupacional para medir riesgos
-                    laborales y garantizar ambientes seguros.</p>
-                  <div class="SILPA-servicio-links">
-                    <a href="monitoreo-ocupacional.html"
-                      class="SILPA-ver-mas">Ver&nbsp; <i
-                        class="fas fa-plus"></i></a>
-                    <a
-                      href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Monitoreo%20Ocupacional%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
-                      target="_blank" class="CotizarServicio">
-                      COTIZAR
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="SILPA-servicio-card">
-                <div class="SILPA-servicio-front">
-                  <img src="img/asesoria.webp"
-                    alt="Monitoreo Ambiental">
-                  <h3>SERVICIO DE ASESORÍA DE PROYECTO AMBIENTAL</h3>
-                </div>
-                <div class="SILPA-servicio-back">
-                  <p>Servicio de asesoría en proyectos ambientales para cumplir
-                    normativas y obtener permisos.</p>
-                  <div class="SILPA-servicio-links">
-                    <a href="asesoria-de-proyecto-ambiental.html"
-                      class="SILPA-ver-mas">Ver&nbsp; <i
-                        class="fas fa-plus"></i></a>
-                    <a
-                      href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Asesoría%20de%20Proyecto%20Ambiental%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
-                      target="_blank" class="CotizarServicio">
-                      COTIZAR
-                    </a>
-                  </div>
+              <div class="SILPA-servicio-back">
+                <p>Servicio de limpieza integral para oficinas, comercios e
+                  industrias con estándares de calidad.</p>
+                <div class="SILPA-servicio-links">
+                  <a href="limpieza-integral.html"
+                    class="SILPA-ver-mas">Ver&nbsp; <i
+                      class="fas fa-plus"></i></a>
+                  <a
+                    href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Limpieza%20Integral%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
+                    target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+
+        <!-- Monitoreos y Asesorías Ambientales -->
+        <div class="SILPA-servicios-categoria">
+          <h3 class="SILPA-categoria-titulo">Gestión Ambiental</h3>
+          <div class="SILPA-servicios-grid">
+            <div class="SILPA-servicio-card">
+              <div class="SILPA-servicio-front">
+                <img src="img/Gestion-Residuos-Solidos.webp"
+                  alt="Gestión de Residuos Sólidos">
+                <h3>SERVICIO DE GESTIÓN DE RESIDUOS SÓLIDOS</h3>
+              </div>
+              <div class="SILPA-servicio-back">
+                <p>Servicio de gestión de residuos sólidos para la recolección,
+                  transporte y disposición final segura, cumpliendo normativas
+                  ambientales.</p>
+                <div class="SILPA-servicio-links">
+                  <a href="gestion-de-residuos-solidos.html"
+                    class="SILPA-ver-mas">Ver&nbsp; <i
+                      class="fas fa-plus"></i></a>
+                  <a
+                    href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Gestión%20de%20Residuos%20Sólidos%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
+                    target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="SILPA-servicio-card">
+              <div class="SILPA-servicio-front">
+                <img src="img/Monitoreo-Ambiental.webp"
+                  alt="Monitoreo Ambiental">
+                <h3>SERVICIO DE MONITOREO AMBIENTAL</h3>
+              </div>
+              <div class="SILPA-servicio-back">
+                <p>Servicio de monitoreo ambiental para evaluar la calidad del
+                  aire y agua según normativas vigentes.</p>
+                <div class="SILPA-servicio-links">
+                  <a href="monitoreo-ambiental.html"
+                    class="SILPA-ver-mas">Ver&nbsp; <i
+                      class="fas fa-plus"></i></a>
+                  <a
+                    href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Monitoreo%20Ambiental%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
+                    target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="SILPA-servicio-card">
+              <div class="SILPA-servicio-front">
+                <img src="img/Monitoreo-Ocupacional.webp"
+                  alt="Monitoreo Ocupacional">
+                <h3>SERVICIO DE MONITOREO OCUPACIONAL</h3>
+              </div>
+              <div class="SILPA-servicio-back">
+                <p>Servicio de monitoreo ocupacional para medir riesgos
+                  laborales y garantizar ambientes seguros.</p>
+                <div class="SILPA-servicio-links">
+                  <a href="monitoreo-ocupacional.html"
+                    class="SILPA-ver-mas">Ver&nbsp; <i
+                      class="fas fa-plus"></i></a>
+                  <a
+                    href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Monitoreo%20Ocupacional%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
+                    target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="SILPA-servicio-card">
+              <div class="SILPA-servicio-front">
+                <img src="img/asesoria.webp"
+                  alt="Monitoreo Ambiental">
+                <h3>SERVICIO DE ASESORÍA DE PROYECTO AMBIENTAL</h3>
+              </div>
+              <div class="SILPA-servicio-back">
+                <p>Servicio de asesoría en proyectos ambientales para cumplir
+                  normativas y obtener permisos.</p>
+                <div class="SILPA-servicio-links">
+                  <a href="asesoria-de-proyecto-ambiental.html"
+                    class="SILPA-ver-mas">Ver&nbsp; <i
+                      class="fas fa-plus"></i></a>
+                  <a
+                    href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Asesoría%20de%20Proyecto%20Ambiental%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
+                    target="_blank" class="CotizarServicio">
+                    COTIZAR
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="footer-container">
         <!-- COLUMNA SILPA-->
@@ -331,7 +410,7 @@
             <li>
               <a href="mailto:comercial@silpa.com.pe">
                 <img src="svg/envelope-at.svg" alt="Correo" width="40"
-                  height="40">&nbsp;comercial@silpa.com
+                  height="40">&nbsp;comercial@silpa.com.pe
               </a>
             </li>
             <li>
@@ -416,11 +495,13 @@
           reservados.</p>
         <p>Sitio Web Desarrollado por:<a
             href="https://www.linkedin.com/in/axl-velez"
-            target="_blank" rel="noopener noreferrer" class="Axl"><strong>Axl
+            target="_blank" rel="noopener noreferrer" class="Axl"><strong>&nbsp;Axl
               Velez</strong></a></p>
       </div>
     </footer>
-    <a href="https://wa.me/51936351298" target="_blank">
+    <a
+      href="https://wa.me/51936351298?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20SILPA%20y%20sus%20servicios.%20¿Podrían%20brindarme%20más%20información?"
+      target="_blank">
       <img src="img/logo_whatsapp.webp" alt="WhatsApp"
         class="whatsapp-icon">
     </a>

@@ -39,6 +39,15 @@
       href="https://abs20252025.github.io/Silpa.github.io/img/favicon.svg"
       sizes="32x32">
 
+    <!-- Meta Tag de Geolocalización (Útil si deseas destacar en Perú) -->
+    <meta name="geo.region" content="PE">
+    <meta name="geo.placename" content="Perú">
+    <meta name="geo.position" content="-9.1900;-75.0152">
+    <meta name="ICBM" content="-9.1900, -75.0152">
+
+    <!-- Meta Tag de Idioma -->
+    <meta http-equiv="content-language" content="es">
+
     <!-- Hojas de estilo con rutas absolutas para evitar problemas -->
     <link rel="stylesheet"
       href="css/header.css">
@@ -53,7 +62,40 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Servicio de Monitoreo Ocupacional",
+        "description": "Evaluamos la exposición a agentes físicos, químicos y biológicos en el entorno laboral para garantizar condiciones seguras en Perú.",
+        "provider": {
+          "@type": "Organization",
+          "name": "SILPA S.A.C.",
+          "url": "https://abs20252025.github.io/Silpa.github.io/",
+          "logo": "https://abs20252025.github.io/Silpa.github.io/img/silpa.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+51939651298",
+            "contactType": "customer service",
+            "areaServed": "PE",
+            "availableLanguage": "es"
+          }
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Perú"
+        },
+        "url": "https://abs20252025.github.io/Silpa.github.io/monitoreo-ocupacional/",
+        "image": "https://abs20252025.github.io/Silpa.github.io/img/Monitoreo-Ocupacional.webp",
+        "serviceType": "Monitoreo Ocupacional",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "PEN",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+      </script>
+      
   </head>
   <body>
     <header class="silpa-header">
@@ -75,6 +117,8 @@
                 href="nosotros.html">Nosotros</a></li>
             <li class="silpa-header__menu-item"><a
                 href="servicios.html">Servicios</a></li>
+            <li class="silpa-header__menu-item"><a
+                href="#">Blog</a></li>
             <li class="silpa-header__menu-item"><a
                 href="contacto.html">Contacto</a></li>
           </ul>
@@ -117,10 +161,10 @@
           <div class="contenedorMetodologia">
             <h4>Nuestra Metodología:</h4>
             <div class="contenedorMetodo">
-              <ul class="li">Evaluación y diagnóstico inicial</ul>
-              <ul class="li">Desarrollo de estrategias y planes de gestión</ul>
-              <ul class="li">Implementación de soluciones y controles</ul>
-              <ul class="li">Monitoreo, seguimiento y mejora continua</ul>
+              <ul class="li">Evaluación y diagnóstico inicial.</ul>
+              <ul class="li">Desarrollo de estrategias y planes de gestión.</ul>
+              <ul class="li">Implementación de soluciones.</ul>
+              <ul class="li">Monitoreo, seguimiento y mejora continua.</ul>
             </div>
           </div>
           <p class="slogan"> <span>SILPA</span>
@@ -159,7 +203,7 @@
             <li>
               <a href="mailto:comercial@silpa.com.pe">
                 <img src="svg/envelope-at.svg" alt="Correo" width="40"
-                  height="40">&nbsp;comercial@silpa.com
+                  height="40">&nbsp;comercial@silpa.com.pe
               </a>
             </li>
             <li>
@@ -244,11 +288,13 @@
           reservados.</p>
         <p>Sitio Web Desarrollado por:<a
             href="https://www.linkedin.com/in/axl-velez"
-            target="_blank" rel="noopener noreferrer" class="Axl"><strong>Axl
+            target="_blank" rel="noopener noreferrer" class="Axl"><strong>&nbsp;Axl
               Velez</strong></a></p>
       </div>
     </footer>
-    <a href="https://wa.me/51936351298" target="_blank">
+    <a
+      href="https://wa.me/51936351298?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20Monitoreo%20Ocupacional%20para%20mi%20empresa.%20Por%20favor,%20proporcióname%20más%20detalles%20sobre%20el%20proceso%20y%20costos."
+      target="_blank">
       <img src="img/logo_whatsapp.webp" alt="WhatsApp"
         class="whatsapp-icon">
     </a>

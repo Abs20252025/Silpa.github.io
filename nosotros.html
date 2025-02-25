@@ -31,6 +31,15 @@
     <link rel="icon" type="image/svg+xml"
       href="https://abs20252025.github.io/Silpa.github.io/img/SILPA-logo.svg">
 
+    <!-- Meta Tag de Geolocalización (Útil si deseas destacar en Perú) -->
+    <meta name="geo.region" content="PE">
+    <meta name="geo.placename" content="Perú">
+    <meta name="geo.position" content="-9.1900;-75.0152">
+    <meta name="ICBM" content="-9.1900, -75.0152">
+
+    <!-- Meta Tag de Idioma -->
+    <meta http-equiv="content-language" content="es">
+
     <!-- Hojas de estilo con rutas absolutas -->
     <link rel="stylesheet"
       href="css/nosotros.css">
@@ -42,6 +51,34 @@
       rel="stylesheet">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "SILPA S.A.C.",
+          "url": "https://abs20252025.github.io/Silpa.github.io/",
+          "logo": "https://abs20252025.github.io/Silpa.github.io/img/SILPA-logo.svg",
+          "description": "SILPA S.A.C. es una empresa peruana dedicada a ofrecer soluciones integrales de limpieza, protección ambiental y saneamiento para empresas e instituciones.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "PE",
+            "addressLocality": "Perú"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+51 936 351 298",
+            "contactType": "customer service",
+            "areaServed": "PE",
+            "availableLanguage": "es"
+          },
+          "sameAs": [
+            "https://www.facebook.com/SilpaPeru",
+            "https://www.instagram.com/SilpaPeru",
+            "https://www.linkedin.com/company/SilpaPeru"
+          ]
+        }
+        </script>
+        
   </head>
   <body>
     <script src="js/nosotros.js"></script>
@@ -64,6 +101,8 @@
                 href="nosotros.html">Nosotros</a></li>
             <li class="silpa-header__menu-item"><a
                 href="servicios.html">Servicios</a></li>
+            <li class="silpa-header__menu-item"><a
+                href="#">Blog</a></li>
             <li class="silpa-header__menu-item"><a
                 href="contacto.html">Contacto</a></li>
           </ul>
@@ -88,7 +127,7 @@
               class="silpa-image">
             <p>Somos SILPA: Soluciones Integrales de Limpieza y Protección
               Ambiental, una empresa 100% peruana líder en la prestación
-              innovadora de servicios de Saneamiento, 
+              innovadora de servicios de Saneamiento,
               Limpieza y Gestión Ambiental. Aportamos soluciones eficientes
               y sostenibles para empresas e instituciones.</p>
           </div>
@@ -254,7 +293,7 @@
             <li>
               <a href="mailto:comercial@silpa.com.pe">
                 <img src="svg/envelope-at.svg" alt="Correo" width="40"
-                  height="40">&nbsp;comercial@silpa.com
+                  height="40">&nbsp;comercial@silpa.com.pe
               </a>
             </li>
             <li>
@@ -339,11 +378,13 @@
           reservados.</p>
         <p>Sitio Web Desarrollado por: <a
             href="https://www.linkedin.com/in/axl-velez"
-            target="_blank" rel="noopener noreferrer" class="Axl"><strong>Axl
+            target="_blank" rel="noopener noreferrer" class="Axl"><strong>&nbsp;Axl
               Velez</strong></a></p>
       </div>
     </footer>
-    <a href="https://wa.me/51936351298" target="_blank">
+    <a
+      href="https://wa.me/51936351298?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20SILPA%20y%20sus%20servicios.%20¿Podrían%20brindarme%20más%20información?"
+      target="_blank">
       <img src="img/logo_whatsapp.webp" alt="WhatsApp"
         class="whatsapp-icon">
     </a>

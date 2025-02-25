@@ -18,7 +18,6 @@
       content="SILPA S.A.C. - Soluciones Integrales de Limpieza y Protección Ambiental">
     <meta property="og:description"
       content="En SILPA S.A.C. ofrecemos soluciones integrales en limpieza, protección ambiental y saneamiento. Descubre nuestros servicios y cómo podemos ayudarte a mejorar tu entorno laboral en Perú.">
-
     <!-- Imagen con ruta absoluta para evitar errores en redes sociales -->
     <meta property="og:image"
       content="https://abs20252025.github.io/Silpa.github.io/img/silpa.png">
@@ -35,6 +34,15 @@
       href="https://abs20252025.github.io/Silpa.github.io/img/favicon.svg"
       sizes="32x32">
 
+    <!-- Meta Tag de Geolocalización (Útil si deseas destacar en Perú) -->
+    <meta name="geo.region" content="PE">
+    <meta name="geo.placename" content="Perú">
+    <meta name="geo.position" content="-9.1900;-75.0152">
+    <meta name="ICBM" content="-9.1900, -75.0152">
+
+    <!-- Meta Tag de Idioma -->
+    <meta http-equiv="content-language" content="es">
+
     <!-- Hojas de estilo con rutas absolutas para evitar problemas -->
     <link rel="stylesheet"
       href="css/index.css">
@@ -47,10 +55,75 @@
       rel="stylesheet">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "SILPA S.A.C.",
+          "url": "https://abs20252025.github.io/Silpa.github.io/",
+          "logo": "https://abs20252025.github.io/Silpa.github.io/img/silpa.png",
+          "description": "SILPA S.A.C. ofrece soluciones integrales en limpieza, protección ambiental y saneamiento. Descubre nuestros servicios y cómo podemos ayudarte a mejorar tu entorno laboral en Perú.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "PE"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+51939651298",
+            "contactType": "customer service",
+            "areaServed": "PE",
+            "availableLanguage": ["Spanish"]
+          },
+          "sameAs": [
+            "https://www.facebook.com/SILPA-SAC",
+            "https://www.instagram.com/SILPA-SAC",
+            "https://www.linkedin.com/company/SILPA-SAC"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de SILPA S.A.C.",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Servicio de fumigación"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Saneamiento ambiental"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Monitoreo ocupacional"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Monitoreo ambiental"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Limpieza integral"
+                }
+              }
+            ]
+          }
+        }
+    </script>
   </head>
-
   <body>
-
     <section class="inicio-silpa">
       <header class="silpa-header">
         <div class="silpa-header__container">
@@ -70,6 +143,8 @@
                   href="nosotros.html">Nosotros</a></li>
               <li class="silpa-header__menu-item"><a
                   href="servicios.html">Servicios</a></li>
+              <li class="silpa-header__menu-item"><a
+                  href="#">Blog</a></li>
               <li class="silpa-header__menu-item"><a
                   href="contacto.html">Contacto</a></li>
             </ul>
@@ -225,7 +300,8 @@
                 <h3>SERVICIO DE FUMIGACIÓN</h3>
               </div>
               <div class="SILPA-servicio-back">
-                <p>Servicio de fumigación para el control de plagas en hogares,
+                <p>Servicio de fumigación para el control de plagas en
+                  edificios,
                   empresas e industrias con tratamientos seguros y
                   efectivos.</p>
                 <div class="SILPA-servicio-links">
@@ -294,7 +370,7 @@
               </div>
               <div class="SILPA-servicio-back">
                 <p>Servicio de desratización para eliminar ratas y ratones de
-                  forma segura en hogares y empresas.</p>
+                  forma segura en edificios, empresas e industrias.</p>
                 <div class="SILPA-servicio-links">
                   <a href="desratizacion.html" class="SILPA-ver-mas">Ver&nbsp;
                     <i
@@ -463,7 +539,7 @@
             <li>
               <a href="mailto:comercial@silpa.com.pe">
                 <img src="svg/envelope-at.svg" alt="Correo" width="40"
-                  height="40">&nbsp;comercial@silpa.com
+                  height="40">&nbsp;comercial@silpa.com.pe
               </a>
             </li>
             <li>
@@ -548,12 +624,14 @@
           reservados.</p>
         <p>Sitio Web Desarrollado por: <a
             href="https://www.linkedin.com/in/axl-velez"
-            target="_blank" rel="noopener noreferrer" class="Axl"><strong>Axl
+            target="_blank" rel="noopener noreferrer" class="Axl"><strong>&nbsp;Axl
               Velez</strong></a></p>
       </div>
     </footer>
 
-    <a href="https://wa.me/51936351298" target="_blank">
+    <a
+      href="https://wa.me/51936351298?text=¡Hola!%20Estoy%20interesado%20en%20los%20servicios%20de%20SILPA.%20¿Podrían%20brindarme%20más%20información?"
+      target="_blank">
       <img src="img/logo_whatsapp.webp" alt="WhatsApp"
         class="whatsapp-icon">
     </a>

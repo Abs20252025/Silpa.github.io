@@ -7,7 +7,7 @@
 .sectionServicio {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 10px 20px;
     background-color: #162632;
     min-height: 535px;
 }
@@ -21,7 +21,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
-    max-height: 490px;
+    max-height: 450px;
 }
 
 /* Estilos para la imagen */
@@ -29,7 +29,7 @@
     position: relative;
     flex: 1;
     min-width: 300px;
-    max-width: 45%;
+    max-width: 40%;
     overflow: hidden;
     height: 100%;
 }
@@ -54,7 +54,7 @@
 /* Estilos para la descripción */
 .contenedorDescripcionServicio {
     flex: 1;
-    max-width: 55%;
+    max-width: 60%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -184,6 +184,8 @@
 @media (max-width: 1024px) {
     .contenedorServicio {
         flex-direction: column;
+        height: auto;
+        max-height: none;
     }
     .contenedorImagenServicio,
     .contenedorDescripcionServicio {
