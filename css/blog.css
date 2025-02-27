@@ -162,7 +162,6 @@ input {
     }
 
     .sidebarBlog {
-        position: relative;
         width: 100%;
         max-width: 90%;
         text-align: center;
