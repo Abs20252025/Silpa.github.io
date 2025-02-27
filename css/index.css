@@ -71,13 +71,13 @@ html {
 
 /* Cambiar la imagen de fondo de cada slide */
 .slide:nth-child(1) {
-  background-image: url('../img/Silpa-Inicio1.jpg');
+  background-image: url('../img/Silpa-Inicio1.webp');
   background-size: cover;
   background-size: 100% 100%;
 }
 
 .slide:nth-child(2) {
-  background-image: url('../img/banner1.png');
+  background-image: url('../img/banner1.webp');
   background-size: cover;
   background-size: 100% 100%;
 }
@@ -645,7 +645,7 @@ section {
 /* Imagen: empieza oculta y se desliza desde la izquierda */
 .imagen-banner {
   flex: 1;
-  background-image: url('../img/bannerSilpaSac.png');
+  background-image: url('../img/bannerSilpaSac.webp');
   background-size: 100% 100%;
   background-position: center;
   height: auto;
@@ -912,6 +912,7 @@ section {
 }
 
 @media (max-width: 480px) {
+
   .silpa-trabajo-description {
     text-align: justify;
   }
@@ -929,12 +930,12 @@ section {
   }
 
   .slide:nth-child(2) {
-    background-image: url('../img/banner1Movil.png');
+    background-image: url('../img/banner1Movil.webp');
     background-size: cover;
   }
 
   .slide:nth-child(3) {
-    background-image: url('../img/banner2Movil.png');
+    background-image: url('../img/banner2Movil.webp');
     background-size: cover;
   }
 

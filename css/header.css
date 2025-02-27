@@ -95,7 +95,7 @@ html {
 .silpa-header__logo img {
   background-color: #ffffff;
   width: 245px;
-  height: 120px;
+  height: 110px;
 }
 
 /* NAVEGACIÓN */
@@ -383,5 +383,15 @@ html {
   .inicio-silpa.animated .slide-content .btn-primary, .inicio-silpa.animated .slide-content .btn-secondary{
     padding: 5px;
   }
+}
+
+@media (max-width: 480px) {
+
+  /* ICONO WSP FIJO EN LA ESQUINA */
+.whatsapp-icon {
+  bottom: 45px;
+}
+
+
 }
 
