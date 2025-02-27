@@ -180,17 +180,21 @@ input {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .contentBlog {
-        max-width: 100%;
-        padding: 15px;
+@media (max-width: 768px) {
+    .containerBlog {
+        flex-direction: column-reverse; /* Mueve el sidebar arriba */
+        align-items: center;
     }
 
     .sidebarBlog {
-        max-width: 100%;
-        padding: 10px;
+        width: 100%; /* Ocupa todo el ancho */
+        position: static; /* Quita la posición sticky */
+        text-align: center;
     }
 
+    .contentBlog {
+        max-width: 100%; /* Usa todo el ancho disponible */
+    }
     .imageContainer img {
         height: auto;
         max-width: 100%;
