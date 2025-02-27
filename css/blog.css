@@ -149,3 +149,65 @@ input {
 .contentBlog li {
     margin: 5px 0;
 }
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 1024px) {
+    .containerBlog {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contentBlog {
+        max-width: 90%;
+    }
+
+    .sidebarBlog {
+        position: relative;
+        width: 100%;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .sidebarBlog ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .sidebarBlog li {
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contentBlog {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .sidebarBlog {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .imageContainer img {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contentBlog h1 {
+        font-size: 1.5em;
+    }
+
+    .contentBlog h2 {
+        font-size: 1.2em;
+    }
+
+    .sidebarBlog ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
