@@ -28,12 +28,6 @@ body {
   color: var(--color-dark);
 }
 
-body,
-html {
-  overflow-x: hidden;
-  /* Prevenir el scroll horizontal */
-}
-
 /* ICONO WSP FIJO EN LA ESQUINA */
 .whatsapp-icon {
   position: fixed;

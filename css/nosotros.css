@@ -4,6 +4,10 @@
 
 /* Contenedor principal */
 
+body, html{
+  overflow-x: hidden;
+}
+
 .somos-silpa {
   padding: 0;
   /* Sin padding en la sección principal */
