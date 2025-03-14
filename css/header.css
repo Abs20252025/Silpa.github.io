@@ -68,6 +68,7 @@ body {
 
 /* HEADER */
 .silpa-header {
+  overflow-x: hidden;
   background-color: white;
   color: #fff;
   padding: 5px 0px;
